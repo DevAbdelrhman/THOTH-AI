@@ -1,0 +1,23 @@
+package repository
+
+// ConversationRepository 定义 conversation 编排层所需的聚合仓储能力。
+type ConversationRepository interface {
+	ConversationMetadataRepository
+	ConversationForkRepository
+	MessageRepository
+	MessageFeedbackRepository
+	ConversationTraceRepository
+	ContextArtifactRepository
+	CompactRepository
+	MessageEmbeddingRepository
+	FileListingRepository
+	FileLookupRepository
+	ModerationFileRepository
+	FileBatchRepository
+	UploadRepository
+	FileEmbeddingArtifactsRepository
+	EmbeddingRepository
+	RAGRepository
+	FileProcessingRepository
+	ConversationSettingsRepository
+}
