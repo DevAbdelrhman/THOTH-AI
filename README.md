@@ -448,3 +448,4 @@ THOTH Chat is built on the open-source ecosystem. Thanks to all maintainers and 
 THOTH Chat is licensed under the [Apache License 2.0](./LICENSE).
 # THOTH-AI
 # THOTH-AI
+# THOTH-AI
