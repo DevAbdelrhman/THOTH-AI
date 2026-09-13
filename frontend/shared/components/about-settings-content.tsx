@@ -101,7 +101,7 @@ export function AboutSettingsContent({
     {
       label: labels.official,
       value: "THOTH",
-      href: "https://github.com/THOTH-AI",
+      href: "https://github.com/DevAbdelrhman",
       providerIcon: { name: "GitHub", slug: "github" },
     },
     {
@@ -113,13 +113,13 @@ export function AboutSettingsContent({
     {
       label: labels.repository,
       value: "THOTH-Chat",
-      href: "https://github.com/THOTH-AI/THOTH-Chat",
+      href: "https://github.com/DevAbdelrhman/THOTH-AI",
       providerIcon: { name: "GitHub", slug: "github" },
     },
     {
       label: labels.blog,
       value: "blog.cheny.me",
-      href: "https://blog.cheny.me/",
+      href: "https://github.com/DevAbdelrhman/THOTH-AI/blob/main/README.md",
       icon: Newspaper,
     },
     {

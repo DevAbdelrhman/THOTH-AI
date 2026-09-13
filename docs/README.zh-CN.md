@@ -438,7 +438,7 @@ THOTH Chat 基于开源生态构建，感谢所有 AI 工具生态中的维护�
 ## 联系&交流
 
 - 官网：[thoth.com](https://thoth.com/)
-- 博客：[blog.cheny.me](https://blog.cheny.me/)
+- 博客：[blog.cheny.me](https://github.com/DevAbdelrhman/THOTH-AI/blob/main/README.md)
 - 邮箱：[support@thoth.com](mailto:support@thoth.com)
 - Telegram：[t.me/thoth_chat](https://t.me/thoth_chat)
 - 推特 / X：[@THOTH_AI](https://x.com/THOTH_AI)

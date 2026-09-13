@@ -442,7 +442,7 @@ export function PublicSharePage() {
               </>
             ) : null}
             <a
-              href="https://github.com/THOTH-AI/THOTH-Chat"
+              href="https://github.com/DevAbdelrhman/THOTH-AI"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="THOTH Chat on GitHub"

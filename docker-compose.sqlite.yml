@@ -2,15 +2,16 @@ name: thoth-chat
 
 services:
   app:
-    image: ${THOTH_CHAT_IMAGE:-ghcr.io/thoth-ai/thoth-chat:latest}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: thoth-chat:local
     container_name: thoth-chat-app
     ports:
-      # Optional. Localhost-only by default. Put a reverse proxy in front for public access.
       - "127.0.0.1:8080:8080"
     volumes:
       - app_storage:/app/storage
       - app_data:/app/data
-      # The image runs from /app and reads /app/config.yaml automatically.
       - ./config.yaml:/app/config.yaml:ro
     extra_hosts:
       - "host.docker.internal:host-gateway"

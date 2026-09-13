@@ -389,7 +389,7 @@ export function AdminLoginSettingsPage() {
 
   const oidcEndpointValue = oidcEndpointMode === "discovery" ? (providerForm.discoveryURL ?? "") : (providerForm.issuerURL ?? "");
   const callbackSlug = providerForm.slug?.trim() || normalizeProviderSlugPreview(providerForm.name) || "provider";
-  const legacyCallbackURL = `${frontendOrigin || "http://localhost:3000"}/auth/callback?provider=${encodeURIComponent(callbackSlug)}`;
+  const legacyCallbackURL = `${frontendOrigin || "https://thothai.cc"}/auth/callback?provider=${encodeURIComponent(callbackSlug)}`;
   const callbackURL = providerCallbackBaseURL
     ? `${providerCallbackBaseURL}/${encodeURIComponent(callbackSlug)}/callback`
     : legacyCallbackURL;

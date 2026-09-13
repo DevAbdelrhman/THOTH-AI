@@ -438,7 +438,7 @@ THOTH Chat is built on the open-source ecosystem. Thanks to all maintainers and 
 ## Contact & Community
 
 - Website: [thoth.com](https://thoth.com/)
-- Blog: [blog.cheny.me](https://blog.cheny.me/)
+- Blog: [blog.cheny.me](https://github.com/DevAbdelrhman/THOTH-AI/blob/main/README.md)
 - Email: [support@thoth.com](mailto:support@thoth.com)
 - Telegram: [t.me/thoth_chat](https://t.me/thoth_chat)
 - X: [@THOTH_AI](https://x.com/THOTH_AI)

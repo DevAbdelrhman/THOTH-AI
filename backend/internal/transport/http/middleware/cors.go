@@ -8,17 +8,25 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// CORS 处理跨域请求，支持逗号分隔的 Origin allowlist。
+// CORS supports a comma-separated Origin allowlist.
 func CORS(allowOrigin string) gin.HandlerFunc {
 	allowedOrigins := parseAllowedOrigins(allowOrigin)
+
 	return func(c *gin.Context) {
 		origin := strings.TrimRight(strings.TrimSpace(c.GetHeader("Origin")), "/")
 		allowedOrigin := matchAllowedOrigin(origin, allowedOrigins)
+
 		if origin != "" && allowedOrigin == "" {
-			response.ErrorWithCode(c, http.StatusForbidden, "cors.origin_forbidden", "origin is not allowed")
+			response.ErrorWithCode(
+				c,
+				http.StatusForbidden,
+				"cors.origin_forbidden",
+				"origin is not allowed",
+			)
 			c.Abort()
 			return
 		}
+
 		if allowedOrigin != "" {
 			c.Header("Access-Control-Allow-Origin", allowedOrigin)
 		}
@@ -42,16 +50,21 @@ func CORS(allowOrigin string) gin.HandlerFunc {
 func parseAllowedOrigins(raw string) []string {
 	parts := strings.Split(raw, ",")
 	results := make([]string, 0, len(parts))
+
 	for _, part := range parts {
 		value := strings.TrimRight(strings.TrimSpace(part), "/")
+
 		if value == "" {
 			continue
 		}
+
 		results = append(results, value)
 	}
+
 	if len(results) == 0 {
 		return []string{"*"}
 	}
+
 	return results
 }
 
@@ -59,13 +72,30 @@ func matchAllowedOrigin(origin string, allowed []string) string {
 	if origin == "" {
 		return ""
 	}
+
 	for _, item := range allowed {
 		if item == "*" {
 			return origin
 		}
+
 		if strings.EqualFold(origin, item) {
 			return item
 		}
 	}
+
+	// Allow public ngrok domains.
+	lowerOrigin := strings.ToLower(origin)
+
+	if strings.HasPrefix(lowerOrigin, "https://") {
+		host := strings.TrimPrefix(lowerOrigin, "https://")
+
+		if strings.HasSuffix(host, ".ngrok-free.app") ||
+			strings.HasSuffix(host, ".ngrok-free.dev") ||
+			strings.HasSuffix(host, ".ngrok.app") ||
+			strings.HasSuffix(host, ".ngrok.io") {
+			return origin
+		}
+	}
+
 	return ""
 }
