@@ -52,7 +52,7 @@ type EmailRegistrationStartResult struct {
 	ExpiresAt time.Time
 }
 
-// PasswordResetStartResult 表示密码重置验证码请求结果。
+// PasswordResetStartResult 表示密码重置Verification Code请求结果。
 type PasswordResetStartResult struct {
 	Sent      bool
 	ExpiresAt time.Time
@@ -1002,41 +1002,41 @@ func canBootstrapEmail(item *domainuser.User) bool {
 
 func (s *Service) sendRegistrationVerificationEmail(to string, code string) error {
 	return s.sendEmailVerificationCode(to, code, verificationEmailTemplate{
-		Subject:      "THOTH Chat 验证码",
-		Title:        "完成邮箱注册",
-		SecurityNote: "如果不是您本人操作，请忽略这封邮件。",
+		Subject:      "THOTH Chat Verification Code",
+		Title:        "Verify Your Email",
+		SecurityNote: "If you did not request this, please ignore this email.",
 	}, "email registration")
 }
 
 func (s *Service) sendPasswordChangeVerificationEmail(to string, code string) error {
 	return s.sendEmailVerificationCode(to, code, verificationEmailTemplate{
-		Subject:      "THOTH Chat 验证码",
-		Title:        "确认修改密码",
-		SecurityNote: "如果不是您本人操作，请立即检查账号安全。",
+		Subject:      "THOTH Chat Verification Code",
+		Title:        "Confirm Password Change",
+		SecurityNote: "If you did not request this, please check your account security immediately.",
 	}, "password change")
 }
 
 func (s *Service) sendPasswordResetVerificationEmail(to string, code string) error {
 	return s.sendEmailVerificationCode(to, code, verificationEmailTemplate{
-		Subject:      "THOTH Chat 验证码",
-		Title:        "重置密码",
-		SecurityNote: "如果不是您本人操作，请立即检查账号安全。",
+		Subject:      "THOTH Chat Verification Code",
+		Title:        "Reset Your Password",
+		SecurityNote: "If you did not request this, please check your account security immediately.",
 	}, "password reset")
 }
 
 func (s *Service) sendEmailChangeVerificationEmail(to string, code string) error {
 	return s.sendEmailVerificationCode(to, code, verificationEmailTemplate{
-		Subject:      "THOTH Chat 验证码",
-		Title:        "验证邮箱地址",
-		SecurityNote: "如果不是您本人操作，请忽略这封邮件。",
+		Subject:      "THOTH Chat Verification Code",
+		Title:        "Verify Your Email Address",
+		SecurityNote: "If you did not request this, please ignore this email.",
 	}, "email change")
 }
 
 func (s *Service) sendAccountDeleteVerificationEmail(to string, code string) error {
 	return s.sendEmailVerificationCode(to, code, verificationEmailTemplate{
-		Subject:      "THOTH Chat 验证码",
-		Title:        "确认删除账号",
-		SecurityNote: "如果不是您本人操作，请立即检查账号安全。",
+		Subject:      "THOTH Chat Verification Code",
+		Title:        "Confirm Account Deletion",
+		SecurityNote: "If you did not request this, please check your account security immediately.",
 	}, "account deletion")
 }
 
@@ -1218,9 +1218,9 @@ func buildVerificationPlainText(code string, template verificationEmailTemplate)
 
 %s
 
-验证码：%s
+Verification code: %s
 
-10 分钟内有效，请不要泄露给任何人。
+This code is valid for 10 minutes. Do not share it with anyone.
 
 %s`, template.Title, strings.TrimSpace(code), template.SecurityNote)
 }
@@ -1231,7 +1231,7 @@ func buildVerificationHTML(code string, template verificationEmailTemplate, logo
 	escapedSecurityNote := html.EscapeString(strings.TrimSpace(template.SecurityNote))
 	logoHTML := verificationEmailLogoHTML(logoURL)
 	return fmt.Sprintf(`<!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1255,7 +1255,7 @@ func buildVerificationHTML(code string, template verificationEmailTemplate, logo
             </tr>
             <tr>
               <td style="padding:28px 0 0;">
-                <div style="margin:0 0 8px;font-size:13px;font-weight:600;line-height:1.4;color:#312f2b;">验证码</div>
+                <div style="margin:0 0 8px;font-size:13px;font-weight:600;line-height:1.4;color:#312f2b;">Verification Code</div>
                 <table role="presentation" width="100%%" cellpadding="0" cellspacing="0" style="background:#eee8dc;border-radius:8px;">
                   <tr>
                     <td align="center" style="padding:17px 18px 16px;">
@@ -1263,11 +1263,11 @@ func buildVerificationHTML(code string, template verificationEmailTemplate, logo
                     </td>
                   </tr>
                 </table>
-                <div style="margin-top:8px;font-size:12px;line-height:1.65;color:#8c8378;">10 分钟内有效，请不要泄露给任何人。%s</div>
+                <div style="margin-top:8px;font-size:12px;line-height:1.65;color:#8c8378;">This code is valid for 10 minutes. Do not share it with anyone. %s</div>
               </td>
             </tr>
             <tr>
-              <td align="center" style="padding:36px 0 0;font-size:12px;line-height:1.6;color:#aaa298;">这是一封系统邮件，请勿直接回复。</td>
+              <td align="center" style="padding:36px 0 0;font-size:12px;line-height:1.6;color:#aaa298;">This is a system email. Please do not reply.</td>
             </tr>
           </table>
         </td>

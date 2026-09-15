@@ -23,6 +23,7 @@ type AboutLabels = {
   social: string;
   blog: string;
   contact: string;
+  developer: string;
   copyright: string;
   license: string;
 };
@@ -94,8 +95,8 @@ export function AboutSettingsContent({
   const links: AboutLinkItem[] = [
     {
       label: labels.website,
-      value: "thoth.com",
-      href: "https://thoth.com",
+      value: "www.thothai.cc",
+      href: "https://www.thothai.cc",
       icon: Globe,
     },
     {
@@ -106,27 +107,33 @@ export function AboutSettingsContent({
     },
     {
       label: labels.social,
-      value: "@THOTH_AI",
-      href: "https://x.com/THOTH_AI",
+      value: "@thothllm",
+      href: "https://x.com/thothllm",
       providerIcon: { name: "X", slug: "x" },
     },
     {
       label: labels.repository,
-      value: "THOTH-Chat",
+      value: "THOTH-AI",
       href: "https://github.com/DevAbdelrhman/THOTH-AI",
       providerIcon: { name: "GitHub", slug: "github" },
     },
     {
       label: labels.blog,
-      value: "blog.cheny.me",
-      href: "https://github.com/DevAbdelrhman/THOTH-AI/blob/main/README.md",
+      value: "THOTH-AI",
+      href: "https://github.com/DevAbdelrhman/THOTH-AI",
       icon: Newspaper,
     },
     {
       label: labels.contact,
-      value: "support@thoth.com",
-      href: "mailto:support@thoth.com",
+      value: "support@thothai.cc",
+      href: "mailto:support@thothai.cc",
       icon: Mail,
+    },
+    {
+      label: labels.developer,
+      value: "DevAbdelrhman",
+      href: "https://github.com/DevAbdelrhman",
+      providerIcon: { name: "GitHub", slug: "github" },
     },
   ];
 

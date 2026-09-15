@@ -21,7 +21,8 @@
     "blog": "博客",
     "contact": "联系与支持",
     "copyright": "© 2026 THOTH. THOTH Chat.",
-    "license": "代码遵循 Apache License 2.0 授权。"
+    "license": "代码遵循 Apache License 2.0 授权。",
+    "developer": "开发者"
   },
   "appearance": "外观",
   "language": "语言",
