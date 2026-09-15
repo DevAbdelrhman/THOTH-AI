@@ -1,0 +1,236 @@
+{
+  "title": "الملفات",
+  "fileCount": "{count} ملف",
+  "searchPlaceholder": "البحث في الملفات",
+  "empty": "لا توجد ملفات",
+  "emptyDescription": "ارفع أول ملف لك من الزاوية العلوية اليمنى",
+  "upload": "رفع",
+  "delete": "حذف الملف",
+  "rename": "إعادة تسمية الملف",
+
+  "filters": {
+    "all": "الكل",
+    "image": "الصور",
+    "audio": "الصوتيات",
+    "video": "الفيديوهات",
+    "document": "المستندات",
+    "spreadsheet": "جداول البيانات",
+    "presentation": "العروض التقديمية",
+    "pdf": "PDF",
+    "code": "البرمجيات"
+  },
+
+  "sort": {
+    "size": "الحجم",
+    "name": "الاسم",
+    "created": "تاريخ الإنشاء",
+    "lastUsed": "آخر استخدام"
+  },
+
+  "actions": {
+    "collapseSidebar": "طي الشريط الجانبي",
+    "expandSidebar": "توسيع الشريط الجانبي",
+    "search": "بحث",
+    "filter": "تصفية",
+    "sort": "ترتيب",
+    "open": "فتح",
+    "download": "تنزيل",
+    "delete": "حذف",
+    "rename": "إعادة تسمية",
+    "select": "تحديد",
+    "moreActions": "المزيد من الإجراءات",
+    "cancelSelect": "إلغاء التحديد",
+    "selectFile": "تحديد الملف",
+    "selectAll": "تحديد الكل",
+    "loadMore": "مرر لأسفل لتحميل المزيد"
+  },
+
+  "selection": {
+    "count": "تم تحديد {count}",
+    "selectLoaded": "تحديد الملفات المحملة",
+    "clear": "إلغاء التحديد"
+  },
+
+  "storage": {
+    "title": "مساحة التخزين",
+    "used": "المستخدم",
+    "usedTotal": "{used} / {total}",
+    "usedUnlimited": "{used} / غير محدود",
+    "usedPercent": "المستخدم {percent}%",
+    "remaining": "المتبقي {remaining}",
+    "percent": "{percent}%",
+    "unlimited": "غير محدود",
+    "noLimit": "لا يوجد حد لإجمالي السعة"
+  },
+
+  "deleteDialog": {
+    "title": "حذف الملف",
+    "description": "هل أنت متأكد من حذف الملف «{name}»؟ لا يمكن التراجع عن هذا الإجراء.",
+    "fallbackName": "ملف"
+  },
+
+  "bulkDeleteDialog": {
+    "title": "حذف الملفات بشكل جماعي",
+    "description": "هل أنت متأكد من حذف الملفات المحددة وعددها {count}؟ لا يمكن التراجع عن هذا الإجراء.",
+    "confirm": "تأكيد الحذف"
+  },
+
+  "list": {
+    "loadingMore": "جارٍ تحميل المزيد...",
+    "loadMore": "مرر لأسفل لتحميل المزيد",
+    "syncing": "جارٍ المزامنة...",
+    "allLoaded": "تم تحميل جميع الملفات",
+    "ragDisabled": "تم تعطيل استرجاع RAG",
+    "ragReady": "يدعم البحث الذكي"
+  },
+
+  "preview": {
+    "workspaceTitle": "مساحة عمل الملفات",
+    "workspaceDescription": "بعد تحديد ملف، يمكنك معاينته وتنزيله واستعراض تفاصيله هنا.",
+    "preview": "معاينة",
+    "extract": "استخراج",
+    "zoomOut": "تصغير",
+    "zoomIn": "تكبير",
+    "enterFullscreen": "الدخول إلى ملء الشاشة",
+    "exitFullscreen": "الخروج من ملء الشاشة",
+    "svgPreview": "معاينة SVG",
+    "imagePreview": "معاينة الصورة",
+    "playVideo": "تشغيل الفيديو",
+    "pauseVideo": "إيقاف الفيديو مؤقتًا",
+    "cannotPreview": "لا يمكن المعاينة حاليًا",
+    "unsupportedTitle": "لا يمكن معاينة نوع الملف هذا",
+    "unsupportedDescription": "نوع الملف الحالي لا يدعم المعاينة عبر الإنترنت حاليًا، حاول تنزيله ثم فتحه.",
+    "noExtractTitle": "لا توجد نتائج استخراج",
+    "noExtractDescription": "لا يوجد نص مستخرج يمكن عرضه من الملف الحالي."
+  },
+
+  "meta": {
+    "moreInfo": "مزيد من المعلومات",
+    "description": "معلومات البيانات الوصفية التفصيلية للملف",
+    "id": "المعرّف",
+    "category": "الفئة",
+    "detectedMime": "MIME المكتشف",
+    "processingStatus": "حالة المعالجة",
+    "extractStatus": "حالة الاستخراج",
+    "embedStatus": "حالة المتجهات",
+    "chunks": "أجزاء المتجهات",
+    "size": "الحجم",
+    "purpose": "الغرض",
+    "createdAt": "وقت الرفع",
+    "updatedAt": "آخر تحديث",
+    "expiresAt": "وقت انتهاء الصلاحية",
+    "sha256": "SHA-256",
+    "failureReason": "سبب الفشل",
+    "embedError": "خطأ في الفهرسة",
+    "unset": "غير مضبوط",
+    "unknown": "غير معروف"
+  },
+
+  "rag": {
+    "enabled": "الفهرس جاهز",
+    "disabled": "الاسترجاع معطل",
+    "enabledTitle": "تم السماح باستخدام هذا الملف في البحث الذكي، انقر للتعطيل",
+    "disabledTitle": "لا يُستخدم هذا الملف في البحث الذكي، انقر للتفعيل",
+    "enabledToast": "تم السماح باستخدام هذا الملف في البحث الذكي",
+    "disabledToast": "تم إيقاف استخدام هذا الملف في البحث الذكي"
+  },
+
+  "toasts": {
+    "sessionExpired": "انتهت صلاحية تسجيل الدخول",
+    "viewAfterLogin": "يرجى تسجيل الدخول مرة أخرى لعرض الملفات.",
+    "uploadAfterLogin": "يرجى تسجيل الدخول مرة أخرى لرفع الملفات.",
+    "deleteAfterLogin": "يرجى تسجيل الدخول مرة أخرى لحذف الملفات.",
+    "renameAfterLogin": "يرجى تسجيل الدخول مرة أخرى لإعادة تسمية الملفات.",
+    "operateAfterLogin": "يرجى تسجيل الدخول مرة أخرى لإجراء العملية.",
+    "listLoadFailed": "فشل تحميل قائمة الملفات",
+    "uploadedOne": "تم رفع الملف",
+    "uploadedMany": "تم رفع {count} ملفات",
+    "duplicateReused": "تم اكتشاف ملف مكرر وإعادة استخدامه",
+    "partialUploadFailed": "فشل رفع بعض الملفات",
+    "partialUploadDescription": "نجح {success}، وفشل {failed}.",
+    "uploadFailed": "فشل رفع الملف",
+    "deleteSucceeded": "تم حذف الملف",
+    "deleteFailed": "فشل حذف الملف",
+    "bulkDeleteSucceeded": "تم حذف {count} ملفات",
+    "bulkDeletePartialFailed": "فشل حذف بعض الملفات",
+    "bulkDeletePartialDescription": "نجح {success}، وفشل {failed}.",
+    "renameEmpty": "لا يمكن أن يكون اسم الملف فارغًا",
+    "renameSucceeded": "تم تحديث اسم الملف",
+    "renameFailed": "فشلت إعادة تسمية الملف",
+    "settingFailed": "فشل حفظ الإعداد",
+    "previewLoadFailed": "فشل تحميل معاينة الملف",
+    "previewProcessingFailed": "فشلت معالجة الملف، ولا يمكن معاينته حاليًا.",
+    "previewProcessing": "جارٍ معالجة الملف، وستتمكن من معاينته لاحقًا.",
+    "extractProcessingFailed": "فشلت معالجة الملف، ولا توجد نتائج استخراج يمكن عرضها حاليًا.",
+    "extractProcessing": "لم يكتمل استخراج الملف بعد، يمكنك عرض النتائج لاحقًا.",
+    "extractLoadFailed": "فشل تحميل نتائج الاستخراج"
+  },
+
+  "previewDialog": {
+    "sessionExpired": "انتهت صلاحية تسجيل الدخول، يرجى تسجيل الدخول مرة أخرى.",
+    "loadFailed": "فشل تحميل الملف",
+    "cannotPreview": "لا يمكن معاينة هذا الملف",
+    "unsupported": "المعاينة عبر الإنترنت غير مدعومة حاليًا",
+    "downloadHint": "يرجى تنزيل الملف لعرضه",
+    "downloadUnavailableForShare": "التنزيل غير متاح حاليًا للملفات المشتركة بشكل عام.",
+    "fallbackTitle": "معاينة الملف",
+    "description": "معاينة هذا الملف في مربع الحوار.",
+    "downloadFile": "تنزيل الملف",
+    "download": "تنزيل"
+  },
+
+  "previewErrors": {
+    "sheetLoadFailed": "فشل تحميل معاينة جدول البيانات",
+    "documentUnsupportedTitle": "لا يمكن معاينة نوع الملف هذا",
+    "documentUnsupportedDescription": "نوع الملف الحالي لا يدعم المعاينة عبر الإنترنت حاليًا، حاول تنزيله ثم فتحه.",
+    "pdfLoadFailed": "فشل تحميل معاينة PDF، حاول فتح الملف الأصلي في علامة تبويب جديدة.",
+    "pdfPassword": "ملف PDF الحالي محمي بكلمة مرور، والمعاينة داخل التطبيق غير مدعومة حاليًا. يرجى فتح الملف الأصلي مباشرة.",
+    "pdfInvalid": "تنسيق ملف PDF الحالي غير صالح أو أن محتواه تالف، ولا يمكن معاينته داخل التطبيق.",
+    "pdfReadFailed": "فشلت قراءة ملف PDF، حاول مرة أخرى لاحقًا أو افتح الملف الأصلي مباشرة.",
+    "pdfOpenOriginal": "فتح ملف PDF الأصلي",
+    "wordLoadFailed": "فشل تحميل معاينة Word",
+    "wordViewerLoadFailed": "فشل تحميل عارض Word",
+    "wordContainerNotReady": "حاوية معاينة Word غير جاهزة",
+    "untitledAudio": "ملف صوتي بدون اسم"
+  },
+
+  "status": {
+    "unknown": "غير معروف",
+    "available": "متاح",
+    "processing": "جارٍ المعالجة",
+    "failed": "فشل",
+    "searchable": "قابل للبحث",
+    "retrievalDisabled": "الاسترجاع غير مفعّل",
+    "processingFailed": "فشلت المعالجة",
+    "processingFailedDetail": "فشلت معالجة الملف، يرجى إعادة رفعه أو تعديل الاستراتيجية ثم المحاولة مرة أخرى.",
+    "errorCode": "رمز الخطأ: {code}",
+    "indexFailed": "فشلت الفهرسة",
+    "indexFailedDetail": "أصبح الملف متاحًا للمحادثة باستخدام النص الكامل، لكن فشل إنشاء فهرس البحث الذكي.",
+    "waiting": "في انتظار المعالجة",
+    "waitingDetail": "تم رفع الملف وهو في انتظار دخوله إلى قائمة المعالجة.",
+    "queued": "في قائمة الانتظار",
+    "queuedDetail": "دخل الملف إلى قائمة المعالجة، وهو جاهز لاستخراج النص.",
+    "ocr": "جارٍ تنفيذ OCR",
+    "extracting": "جارٍ الاستخراج",
+    "ocrDetail": "جارٍ استخدام محرك OCR للتعرف على النص واستخراجه.",
+    "extractingDetail": "جارٍ استخراج محتوى النص من الملف.",
+    "embedding": "جارٍ تحويل النص إلى متجهات",
+    "embeddingDetail": "اكتمل استخراج النص، وجارٍ إنشاء فهرس المتجهات الدلالية.",
+    "ready": "جاهز",
+    "readyRagDetail": "الملف جاهز ويدعم إدراج النص الكامل والبحث الذكي (RAG).",
+    "readyFullContextDetail": "تمت معالجة الملف ويمكن استخدامه مباشرة في المحادثة (وضع إدراج النص الكامل).",
+    "imageReady": "الصورة جاهزة",
+    "imageReadyDetail": "يمكن استخدام الصورة في هذه المحادثة.",
+    "genericReadyDetail": "تمت معالجة الملف ويمكن استخدامه مباشرة في المحادثة.",
+    "preparing": "جارٍ المعالجة",
+    "preparingDetail": "جارٍ تجهيز الملف، يرجى الانتظار.",
+    "embedReady": "البحث الذكي متاح ✓",
+    "embedProcessing": "جارٍ إنشاء الفهرس…",
+    "embedFailed": "فشلت الفهرسة",
+    "embedPending": "في انتظار إنشاء الفهرس",
+    "extractReady": "اكتمل الاستخراج ✓",
+    "extractProcessing": "جارٍ الاستخراج…",
+    "extractFailed": "فشل الاستخراج",
+    "extractPending": "في انتظار الاستخراج"
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "title": "الأدوات",
+  "sections": {
+    "mcpTools": "أدوات MCP",
+    "servers": "خدمات MCP",
+    "tools": "أدوات MCP"
+  },
+  "fields": {
+    "mcpEnable": {
+      "label": "تفعيل أدوات MCP",
+      "description": "السماح للمستخدمين باختيار أدوات MCP المفعّلة داخل المحادثات."
+    },
+    "toolPrompt": {
+      "label": "تعليمة استدعاء أدوات MCP",
+      "description": "تتحكم في توقيت وطريقة استدعاء النموذج لأدوات MCP. اتركها فارغة لاستخدام التعليمة الافتراضية المضمّنة."
+    },
+    "defaultPromptPlaceholder": "اتركها فارغة لاستخدام التعليمة الافتراضية المضمّنة",
+    "maxSelectedTools": {
+      "label": "عدد الأدوات القابلة للاختيار في الرسالة",
+      "description": "الحد الأقصى لعدد أدوات MCP التي يمكن اختيارها في رسالة واحدة. القيمة الافتراضية 32، والحد الأقصى 128."
+    },
+    "maxLLMCalls": {
+      "label": "الحد الأقصى لطلبات LLM",
+      "description": "إجمالي عدد طلبات LLM المسموح بها داخل رسالة واحدة، بما في ذلك الطلب الأول والملخص النهائي. القيمة الافتراضية 5، والحد الأدنى 2."
+    },
+    "maxToolCalls": {
+      "label": "الحد الأقصى لاستدعاءات MCP Tool",
+      "description": "إجمالي عدد استدعاءات MCP Tool المسموح بها داخل رسالة واحدة، وتُحتسب الاستدعاءات الفاشلة ضمن العدد. القيمة الافتراضية 8."
+    },
+    "maxConcurrentCalls": {
+      "label": "الحد الأقصى لاستدعاءات MCP المتزامنة",
+      "description": "الحد الأقصى لعدد استدعاءات MCP Tool التي يمكن تنفيذها في الوقت نفسه على نسخة خدمة واحدة. القيمة الافتراضية 8."
+    },
+    "toolTimeout": {
+      "label": "مهلة استدعاء MCP Tool",
+      "description": "أقصى مدة انتظار لاستدعاء MCP Tool واحد، بالثواني. القيمة الافتراضية 10."
+    },
+    "toolRetry": {
+      "label": "عدد محاولات إعادة MCP Tool",
+      "description": "عدد مرات إعادة المحاولة بعد فشل استدعاء MCP Tool. القيمة الافتراضية 0."
+    }
+  },
+  "status": {
+    "active": "مفعّل",
+    "inactive": "معطّل",
+    "all": "الكل",
+    "enabled": "مفعّل",
+    "disabled": "معطّل"
+  },
+  "sort": {
+    "customOrder": "ترتيب مخصص",
+    "nameAsc": "الاسم A-Z",
+    "nameDesc": "الاسم Z-A",
+    "statusAsc": "الحالة",
+    "updatedDesc": "الأحدث تحديثًا",
+    "updatedAsc": "الأقدم تحديثًا"
+  },
+  "table": {
+    "name": "الاسم",
+    "url": "العنوان",
+    "status": "الحالة",
+    "tools": "الأدوات",
+    "lastSynced": "آخر مزامنة",
+    "tool": "الأداة",
+    "description": "الوصف",
+    "schema": "Schema",
+    "enabled": "مفعّل",
+    "emptyServers": "لا توجد خدمات MCP حاليًا",
+    "emptyTools": "لا توجد أدوات حاليًا، يرجى المزامنة أولًا",
+    "emptyFilteredTools": "لا توجد أدوات مطابقة",
+    "noDescription": "لا يوجد وصف",
+    "unsynced": "غير متزامن"
+  },
+  "toolbar": {
+    "searchServers": "البحث باسم الخدمة أو العنوان",
+    "searchTools": "البحث باسم الأداة أو الوصف",
+    "add": "إضافة",
+    "sync": "مزامنة",
+    "syncTools": "مزامنة الأدوات",
+    "editServer": "تعديل الخدمة",
+    "deleteServer": "حذف الخدمة",
+    "viewTools": "عرض أدوات MCP الخاصة بـ {name}",
+    "toggleServer": "تبديل حالة خدمة MCP {name}",
+    "selectPageTools": "تحديد أدوات الصفحة الحالية",
+    "selectTool": "تحديد الأداة {name}",
+    "editTool": "تعديل الأداة",
+    "viewSchema": "عرض Schema",
+    "viewToolSchema": "عرض Schema الخاصة بالأداة {name}",
+    "toggleTool": "تبديل الأداة {name}",
+    "activateSelected": "تفعيل",
+    "deactivateSelected": "تعطيل",
+    "order": "الترتيب"
+  },
+  "order": {
+    "title": "ترتيب عرض MCP",
+    "description": "تهيئة ترتيب عرض خدمات MCP والأدوات الموجودة داخل كل خدمة في محدد المحادثة.",
+    "loading": "جارٍ تحميل ترتيب MCP",
+    "empty": "لا توجد خدمات MCP قابلة للترتيب",
+    "loadFailed": "فشل تحميل ترتيب MCP",
+    "serverHeader": "خدمة MCP",
+    "toolHeader": "الأداة",
+    "itemCount": "{count} عنصر",
+    "dragServer": "اسحب لتعديل ترتيب خدمة MCP {name}",
+    "dragTool": "اسحب لتعديل ترتيب {name}",
+    "statusActive": "مفعّل",
+    "statusInactive": "معطّل",
+    "emptyTools": "لا توجد أدوات قابلة للترتيب لهذه الخدمة",
+    "saveSuccess": "تم حفظ ترتيب عرض MCP",
+    "saveFailed": "فشل حفظ ترتيب عرض MCP"
+  },
+  "bulkConfirm": {
+    "title": "تأكيد العملية المجمعة",
+    "description": "سيتم تنفيذ هذه العملية المجمعة على أدوات {count} المحددة.",
+    "confirm": "تأكيد التنفيذ",
+    "pending": "جارٍ المعالجة"
+  },
+  "syncConfirm": {
+    "title": "مزامنة أدوات MCP",
+    "description": "اختر طريقة معالجة اسم الأداة «{name}» ووصفها.",
+    "preserve": "الاحتفاظ بالمحتوى الحالي",
+    "preserveDescription": "عدم تغيير الاسم والوصف، ومزامنة باقي المعلومات بشكل طبيعي",
+    "overwrite": "استخدام محتوى الخدمة",
+    "overwriteDescription": "مزامنة الاسم والوصف اللذين تُرجعهما خدمة MCP"
+  },
+  "serverDialog": {
+    "createTitle": "إضافة خدمة MCP",
+    "editTitle": "تعديل خدمة MCP",
+    "description": "تهيئة نقطة نهاية خدمة MCP Streamable HTTP وبيانات اعتماد الوصول.",
+    "name": "اسم الخدمة",
+    "namePlaceholder": "اسم الخدمة",
+    "status": "حالة الخدمة",
+    "url": "عنوان الخدمة",
+    "authToken": "مفتاح المصادقة",
+    "authTokenCreatePlaceholder": "يمكن تركه فارغًا",
+    "authTokenEditPlaceholder": "اتركه فارغًا للإبقاء على القيمة الحالية",
+    "headers": "ترويسات الطلب"
+  },
+  "toolDialog": {
+    "title": "تعديل أداة MCP",
+    "description": "تعديل اسم الأداة ووصفها وقدرات الاستدعاء الاختيارية.",
+    "displayName": "اسم العرض",
+    "displayNamePlaceholder": "اسم عرض الأداة",
+    "toolDescription": "الوصف",
+    "toolDescriptionPlaceholder": "وضّح المهام التي تناسب هذه الأداة",
+    "imageRoutingTitle": "معالجة مرفقات الصور",
+    "imageRoutingTooltip": "تُستخدم فقط مع الأدوات القادرة على استقبال بيانات الصور. عند التفعيل، يستدعي النظام هذه الأداة أولًا في الخلفية، بينما يستقبل النموذج الرئيسي النتيجة النصية فقط. يجب تعيين المعلمات يدويًا وفقًا لـ Schema الخاصة بالأداة، ولن يتعرف النظام على الحقول تلقائيًا.",
+    "imageArgument": "معلمة استقبال الصورة",
+    "imageArgumentTooltip": "اختر معلمة السلسلة النصية في Schema الخاصة بالأداة التي تستقبل بيانات الصور المشفّرة فعليًا.",
+    "selectImageArgument": "اختر معلمة بيانات الصورة",
+    "noStringArguments": "لا تحتوي Schema الخاصة بالأداة الحالية على معلمة نصية يمكنها استقبال بيانات الصور، ولا يمكن تفعيل هذه الإمكانية.",
+    "schemaArgumentRequired": "مطلوبة",
+    "imageEncoding": "تنسيق النقل",
+    "imageEncodingTooltip": "اختر التنسيق وفقًا لمتطلبات واجهة الأداة. يتضمن Data URL نوع MIME، بينما يحتوي Base64 فقط على البيانات المشفّرة.",
+    "imageEncodingDataURL": "Data URL (يتضمن نوع MIME)",
+    "imageEncodingBase64": "Base64 فقط",
+    "passUserPrompt": "تمرير سؤال المستخدم أيضًا",
+    "passUserPromptTooltip": "تمرير إدخال المستخدم لهذه الجولة إلى الأداة أيضًا، وهو مناسب لأدوات الرؤية التي تحتاج إلى تحليل التعليمات.",
+    "promptArgument": "معلمة استقبال سؤال المستخدم",
+    "selectPromptArgument": "اختر معلمة سؤال المستخدم",
+    "unmappedRequiredArguments": "المعلمات المطلوبة غير المعيّنة: {names}"
+  },
+  "schemaDialog": {
+    "fallbackTitle": "Schema الأداة",
+    "description": "JSON Schema لمعلمات إدخال {name}",
+    "fallbackDescription": "JSON Schema لمعلمات الإدخال"
+  },
+  "confirm": {
+    "deleteServer": "حذف خدمة MCP «{name}»؟"
+  },
+  "toast": {
+    "settingsUpdated": "تم تحديث إعدادات الأدوات",
+    "settingsLoadFailed": "فشل تحميل إعدادات الأدوات",
+    "saveFailed": "فشل الحفظ",
+    "serversLoadFailed": "فشل تحميل خدمات MCP",
+    "toolsLoadFailed": "فشل تحميل أدوات MCP",
+    "toolsSynced": "تمت مزامنة أدوات MCP",
+    "toolsSyncFailed": "فشلت مزامنة أدوات MCP",
+    "serverUpdated": "تم تحديث خدمة MCP",
+    "serverCreated": "تم إنشاء خدمة MCP",
+    "serverSaveFailed": "فشل حفظ خدمة MCP",
+    "serverDeleted": "تم حذف خدمة MCP",
+    "serverDeleteFailed": "فشل حذف خدمة MCP",
+    "serverStatusUpdated": "تم {status} خدمة MCP",
+    "serverStatusFailed": "فشل تحديث حالة خدمة MCP",
+    "toolStatusFailed": "فشل تحديث حالة الأداة",
+    "selectedToolsEnabled": "تم تفعيل الأدوات المحددة",
+    "selectedToolsDisabled": "تم تعطيل الأدوات المحددة",
+    "selectedToolsUpdateFailed": "فشل تحديث الأدوات بشكل مجمع",
+    "toolUpdated": "تم تحديث معلومات الأداة",
+    "toolSaveFailed": "فشل حفظ الأداة",
+    "schemaCopied": "تم نسخ Schema",
+    "copyFailed": "فشل النسخ",
+    "unknownError": "فشل الطلب، يرجى المحاولة مرة أخرى لاحقًا.",
+    "sessionExpired": "انتهت صلاحية جلسة تسجيل الدخول",
+    "sessionExpiredDescription": "يرجى تسجيل الدخول مرة أخرى قبل متابعة العملية."
+  }
+}

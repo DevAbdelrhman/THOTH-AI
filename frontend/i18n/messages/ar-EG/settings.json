@@ -1,0 +1,660 @@
+{
+  "title": "الإعدادات",
+  "general": "عام",
+  "account": "الحساب",
+  "chat": "المحادثة",
+  "subscription": "الاشتراك",
+  "about": "حول",
+  "navigation": "التنقل في الإعدادات",
+  "aboutPage": {
+    "title": "حول",
+    "description": "THOTH Chat هو نظام للوصول إلى النماذج وإدارة المحادثات لتطبيقات الذكاء الاصطناعي متعددة المستخدمين. يجمع بين دليل النماذج والتوجيه متعدد المصادر وإدارة المعاملات والملفات وRAG وأدوات MCP والفوترة حسب الاستخدام وأمان الهوية والتدقيق وإعدادات التشغيل في لوحة تحكم موحدة.",
+    "details": "معلومات المنتج",
+    "product": "المنتج",
+    "version": "الإصدار",
+    "console": "لوحة التحكم",
+    "userConsole": "واجهة المستخدم",
+    "official": "رسمي",
+    "website": "الموقع الرسمي",
+    "repository": "المستودع",
+    "social": "X",
+    "blog": "المدونة",
+    "contact": "التواصل والدعم",
+    "copyright": "© 2026 THOTH. THOTH Chat.",
+    "license": "الكود مرخص بموجب Apache License 2.0.",
+    "developer": "المطور"
+  },
+  "appearance": "المظهر",
+  "language": "اللغة",
+  "languageDescription": "اختر لغة الواجهة المستخدمة حاليًا في المتصفح والحساب.",
+  "generalPage": {
+    "profile": {
+      "avatar": "الصورة الشخصية",
+      "avatarAlt": "الصورة الشخصية للمستخدم",
+      "username": "اسم المستخدم",
+      "usernamePlaceholder": "إعداد اسم المستخدم",
+      "displayName": "الاسم الظاهر",
+      "displayNamePlaceholder": "الاسم الذي يظهر في الواجهة",
+      "displayNameInvalid": "يجب أن يتكون الاسم الظاهر من 3 إلى 16 حرفًا.",
+      "timezone": "المنطقة الزمنية",
+      "conversationPreferences": "تفضيلات المحادثة",
+      "conversationPreferencesPlaceholder": "الأسلوب المفضل وعادات اللغة وتنسيق الإخراج وسير العمل المعتاد."
+    },
+    "username": {
+      "invalid": "يجب أن يتكون اسم المستخدم من 3 إلى 16 حرفًا صغيرًا أو رقمًا أو شرطة سفلية أو شرطة، ولا يمكن استخدام الأسماء المحجوزة.",
+      "alreadyChanged": "يمكن إعداد اسم المستخدم مرة واحدة فقط.",
+      "taken": "اسم المستخدم هذا مستخدم بالفعل."
+    },
+    "toast": {
+      "initialUsernameRequired": "يرجى تغيير اسم المستخدم الأولي.",
+      "setUsernameFailed": "فشل إعداد اسم المستخدم",
+      "usernameUpdated": "تم تحديث اسم المستخدم",
+      "profileUpdated": "تم تحديث الملف الشخصي",
+      "saveProfileFailed": "فشل حفظ الملف الشخصي"
+    },
+    "notifications": {
+      "responseCompletionTitle": "إشعارات اكتمال الرد",
+      "responseCompletionDescription": "إشعارك عند اكتمال النموذج من الرد، وهو مناسب للمهام التي تستغرق وقتًا مثل استدعاءات الأدوات والبحث.",
+      "toggleResponseCompletion": "تبديل إشعارات اكتمال الرد",
+      "unsupportedTitle": "المتصفح الحالي لا يدعم الإشعارات",
+      "unsupportedDescription": "يرجى استخدام متصفح سطح مكتب يدعم Notification API.",
+      "deniedTitle": "تم رفض إذن الإشعارات",
+      "deniedDescription": "اسمح بالإشعارات من إعدادات أذونات الموقع في المتصفح ثم قم بالتفعيل.",
+      "enabledTitle": "تم تفعيل إشعارات المتصفح",
+      "enabledDescription": "ستتلقى إشعارًا من النظام عند اكتمال الرد في الخلفية.",
+      "defaultHelp": "بعد التفعيل، سيطلب المتصفح إذن الإشعارات لإرسال تنبيهات من النظام.",
+      "unsupportedHelp": "المتصفح الحالي لا يدعم إشعارات النظام.",
+      "deniedHelp": "قام المتصفح بحظر الإشعارات، يرجى السماح بها يدويًا من إعدادات المتصفح.",
+      "grantedHelp": "تم تفعيل إشعارات المتصفح. عند اكتمال رد النموذج، سيظهر تنبيه."
+    },
+    "appearance": {
+      "colorMode": "وضع الألوان",
+      "themePreset": "المظهر",
+      "fontSize": "حجم الخط",
+      "preset": {
+        "default": "افتراضي",
+        "azure": "Azure",
+        "cobalt": "Cobalt",
+        "graphite": "Graphite",
+        "lagoon": "Lagoon",
+        "ink": "Ink",
+        "ochre": "Ochre",
+        "sepia": "Sepia"
+      },
+      "theme": {
+        "light": "فاتح",
+        "system": "مطابقة النظام",
+        "dark": "داكن"
+      },
+      "fontSizeOption": {
+        "small": "صغير",
+        "standard": "قياسي",
+        "medium": "متوسط",
+        "large": "كبير"
+      }
+    },
+    "avatarDialog": {
+      "title": "تعديل الصورة الشخصية",
+      "description": "ارفع صورة أو أدخل رابط الصورة أو أنشئ صورة شخصية بنمط البكسل.",
+      "avatarURL": "رابط الصورة الشخصية",
+      "upload": "رفع صورة",
+      "uploading": "جارٍ الرفع",
+      "uploaded": "تم رفع الصورة الشخصية",
+      "uploadFailed": "فشل رفع الصورة الشخصية",
+      "uploadInvalid": "يرجى اختيار ملف صورة",
+      "generate": "إنشاء صورة شخصية",
+      "apply": "تطبيق"
+    }
+  },
+  "profile": "الملف الشخصي",
+  "security": "الأمان",
+  "notifications": "الإشعارات",
+  "memory": "ذاكرة تفضيلات AI",
+  "accountPage": {
+    "title": "الحساب",
+    "password": "كلمة مرور تسجيل الدخول",
+    "twoFactor": "المصادقة الثنائية",
+    "logoutAllDevices": "تسجيل الخروج من جميع أجهزتك المتصلة",
+    "deleteAccount": "حذف حسابك",
+    "publicID": "المعرّف العام للمستخدم",
+    "copyPublicID": "نسخ المعرّف العام للمستخدم",
+    "email": {
+      "label": "البريد الإلكتروني",
+      "withAddress": "البريد الإلكتروني ({email})",
+      "verified": "تم التحقق",
+      "unverified": "لم يتم التحقق"
+    },
+    "actions": {
+      "set": "إعداد",
+      "update": "تحديث",
+      "manage": "إدارة",
+      "generating": "جارٍ الإنشاء",
+      "logOut": "تسجيل الخروج",
+      "loggingOut": "جارٍ تسجيل الخروج",
+      "deleteAccount": "حذف الحساب",
+      "deleting": "جارٍ الحذف",
+      "bind": "ربط",
+      "cancel": "إلغاء",
+      "verify": "تحقق"
+    },
+    "identity": {
+      "title": "ربط مصدر الهوية",
+      "provider": "مصدر الهوية",
+      "username": "اسم المستخدم",
+      "email": "البريد الإلكتروني",
+      "linkedAt": "وقت الربط",
+      "empty": "لا يوجد حاليًا أي مصدر هوية تابع لجهة خارجية مرتبط بالحساب",
+      "unlink": "إلغاء ربط مصدر الهوية",
+      "unlinkDisabled": "يرجى إعداد كلمة مرور أو ربط مصدر هوية آخر أولًا"
+    },
+    "session": {
+      "title": "الجلسات النشطة",
+      "device": "الجهاز",
+      "location": "الموقع",
+      "createdAt": "وقت الإنشاء",
+      "updatedAt": "وقت التحديث",
+      "empty": "لا توجد جلسات نشطة متاحة حاليًا",
+      "current": "الجلسة الحالية",
+      "actions": "إجراءات الجلسة",
+      "logoutThisSession": "تسجيل الخروج من هذه الجلسة",
+      "unknownDevice": "جهاز غير معروف",
+      "unknownLocation": "منطقة غير معروفة",
+      "unknownIP": "IP غير معروف"
+    },
+    "logoutAllDialog": {
+      "title": "تسجيل الخروج من جميع الأجهزة المتصلة؟",
+      "description": "بعد التأكيد، ستنتهي الجلسات المتصلة لهذا الحساب في المتصفحات الأخرى وأجهزة سطح المكتب والأجهزة المحمولة. وسيعود الجهاز الحالي أيضًا إلى صفحة تسجيل الدخول.",
+      "confirm": "تأكيد تسجيل الخروج من جميع الأجهزة"
+    },
+    "deleteDialog": {
+      "title": "حذف الحساب",
+      "description": "حذف الحساب إجراء دائم. لن تتمكن من استعادة حسابك أو سجل محادثاتك.",
+      "verificationTitle": "التحقق من حذف الحساب",
+      "verificationDescription": {
+        "twoFactor": "أدخل رمز المصادقة أو رمز الاسترداد لحذف الحساب.",
+        "email": "أرسل رمز التحقق إلى البريد الإلكتروني الذي تم التحقق منه، ثم أدخله لحذف الحساب."
+      },
+      "verificationUnavailable": "يتطلب حذف الحساب التحقق من هويتك أولًا. يرجى التحقق من البريد الإلكتروني أو تفعيل المصادقة الثنائية."
+    },
+    "securityDialog": {
+      "common": {
+        "cancel": "إلغاء",
+        "save": "حفظ",
+        "saving": "جارٍ الحفظ",
+        "sending": "جارٍ الإرسال",
+        "sendCode": "إرسال",
+        "resendIn": "إعادة الإرسال بعد {seconds}s",
+        "processing": "جارٍ المعالجة",
+        "done": "تم",
+        "verify": "تحقق",
+        "continue": "متابعة",
+        "back": "رجوع",
+        "debugCode": "رمز التطوير: {code}",
+        "copiedLabel": "تم نسخ {label}",
+        "copyFailed": "فشل النسخ",
+        "copyManually": "يرجى تحديد المحتوى ونسخه يدويًا."
+      },
+      "password": {
+        "title": {
+          "required": "إعداد كلمة المرور لأول مرة",
+          "change": "تغيير كلمة المرور",
+          "set": "إعداد كلمة المرور"
+        },
+        "description": {
+          "required": "يتطلب التشغيل الأول تغيير كلمة المرور الأولية. بعد الانتهاء ستنتهي الجلسة الحالية، وستحتاج إلى تسجيل الدخول باستخدام كلمة المرور الجديدة.",
+          "change": "بعد التغيير ستنتهي جلسة تسجيل الدخول الحالية، وستحتاج إلى تسجيل الدخول باستخدام كلمة المرور الجديدة.",
+          "set": "بعد الإعداد يمكنك تسجيل الدخول باستخدام كلمة مرور الحساب، وستُستخدم أيضًا كبيانات اعتماد أمان قبل إلغاء ربط مصادر الهوية."
+        },
+        "verificationTitle": "التحقق من تغيير كلمة المرور",
+        "verificationDescription": {
+          "twoFactor": "أدخل رمز المصادقة أو رمز الاسترداد للمتابعة.",
+          "email": "أرسل رمز التحقق إلى البريد الإلكتروني الذي تم التحقق منه، ثم أدخله للمتابعة."
+        },
+        "labels": {
+          "currentPassword": "كلمة المرور الحالية",
+          "newPassword": "كلمة المرور الجديدة",
+          "loginPassword": "كلمة مرور تسجيل الدخول",
+          "twoFactorCode": "رمز المصادقة الثنائية",
+          "emailCode": "رمز البريد الإلكتروني"
+        },
+        "placeholders": {
+          "password": "8 أحرف على الأقل، ولا يمكن أن تكون أرقامًا فقط",
+          "otpOrRecovery": "رمز التحقق أو رمز الاسترداد",
+          "sixDigitCode": "رمز تحقق مكون من 6 أرقام"
+        }
+      },
+      "email": {
+        "title": {
+          "set": "إعداد البريد الإلكتروني",
+          "change": "تغيير البريد الإلكتروني"
+        },
+        "description": {
+          "bootstrapVerified": "يتطلب إعداد البريد الإلكتروني لأول مرة التحقق من ملكية البريد الإلكتروني الجديد.",
+          "saveOnly": "سيتم تحديث البريد الإلكتروني بعد الحفظ.",
+          "change": "سيتطلب THOTH Chat عمليات التحقق اللازمة وفقًا لحالة أمان الحساب الحالية، ثم يحفظ التغيير."
+        },
+        "labels": {
+          "newEmail": "البريد الإلكتروني الجديد"
+        }
+      },
+      "verification": {
+        "title": {
+          "emailBootstrap": "التحقق من البريد الإلكتروني الجديد",
+          "emailChange": "التحقق من تغيير البريد الإلكتروني",
+          "currentEmail": "التحقق من البريد الإلكتروني"
+        },
+        "description": {
+          "emailBootstrap": "أرسل رمز التحقق إلى البريد الإلكتروني الجديد، ثم أدخله لحفظ البريد الإلكتروني.",
+          "emailChange": "أكمل عمليات التحقق اللازمة ثم احفظ تغيير البريد الإلكتروني.",
+          "currentEmail": "أرسل رمز التحقق إلى {email}، ثم أدخله لتمييز البريد الإلكتروني على أنه تم التحقق منه."
+        },
+        "labels": {
+          "twoFactorCode": "رمز المصادقة الثنائية",
+          "emailCode": "رمز البريد الإلكتروني",
+          "currentEmailCode": "رمز البريد الإلكتروني الحالي",
+          "newEmail": "البريد الإلكتروني الجديد",
+          "newEmailCode": "رمز البريد الإلكتروني الجديد",
+          "verificationCode": "رمز التحقق"
+        },
+        "placeholders": {
+          "otpOrRecovery": "رمز التحقق أو رمز الاسترداد",
+          "sixDigitCode": "رمز تحقق مكون من 6 أرقام"
+        },
+        "actions": {
+          "useEmail": "استخدام التحقق عبر البريد الإلكتروني",
+          "useTwoFactor": "استخدام المصادقة الثنائية"
+        }
+      },
+      "twoFactor": {
+        "title": {
+          "setup": "تفعيل المصادقة الثنائية",
+          "manage": "إدارة المصادقة الثنائية",
+          "recovery": "حفظ رموز الاسترداد"
+        },
+        "description": {
+          "setup": "استخدم تطبيق المصادقة لمسح رمز QR أو الربط يدويًا.",
+          "manage": "أدخل رمز التحقق أو رمز الاسترداد للمتابعة.",
+          "recovery": "تظهر رموز الاسترداد مرة واحدة فقط، يرجى حفظها في مكان آمن."
+        },
+        "tabs": {
+          "qr": "رمز QR",
+          "manual": "الربط اليدوي"
+        },
+        "errors": {
+          "codeRequired": "يرجى إدخال رمز التحقق"
+        },
+        "qrLabel": "رمز QR للمصادقة الثنائية",
+        "setupExpired": "انتهت صلاحية عملية الإعداد الحالية",
+        "qrUnavailable": "رمز QR غير متاح حاليًا، استخدم المفتاح اليدوي لإتمام الربط.",
+        "scanThenVerify": "امسح رمز QR ثم أدخل رمز التحقق لإتمام الربط",
+        "regenerate": "إعادة الإنشاء",
+        "validUntil": "صالح حتى {time}",
+        "secret": "المفتاح",
+        "copySecret": "نسخ المفتاح",
+        "otpAuthUri": "OTP Auth URI",
+        "copyOtpUri": "نسخ OTP Auth URI",
+        "code": "رمز التحقق",
+        "sixDigitCode": "رمز تحقق مكون من 6 أرقام",
+        "codeOrRecovery": "رمز التحقق أو رمز الاسترداد",
+        "regenerateRecoveryCodes": "إعادة إنشاء رموز الاسترداد",
+        "recoveryCodes": "رموز الاسترداد",
+        "copyRecoveryCodes": "نسخ رموز الاسترداد",
+        "enable": "تفعيل",
+        "disable": "إيقاف"
+      }
+    },
+    "toasts": {
+      "retryLater": "يرجى المحاولة مرة أخرى لاحقًا.",
+      "sessionMissing": "لم يتم اكتشاف جلسة تسجيل دخول",
+      "loadFailed": "فشل تحميل معلومات الحساب",
+      "publicIDCopied": "تم نسخ المعرّف العام",
+      "copyFailed": "فشل النسخ",
+      "codeSent": "تم إرسال رمز التحقق",
+      "sendCodeFailed": "فشل إرسال رمز التحقق",
+      "passwordChanged": "تم تغيير كلمة المرور",
+      "passwordChangedDescription": "يرجى تسجيل الدخول مرة أخرى باستخدام كلمة المرور الجديدة.",
+      "changePasswordFailed": "فشل تغيير كلمة المرور",
+      "emailSet": "تم إعداد البريد الإلكتروني",
+      "setEmailFailed": "فشل إعداد البريد الإلكتروني",
+      "emailVerified": "تم التحقق من البريد الإلكتروني",
+      "verifyEmailFailed": "فشل التحقق من البريد الإلكتروني",
+      "currentEmailCodeSent": "تم إرسال رمز البريد الإلكتروني الحالي",
+      "newEmailCodeSent": "تم إرسال رمز البريد الإلكتروني الجديد",
+      "deleteAccountCodeSent": "تم إرسال رمز حذف الحساب",
+      "emailChanged": "تم تغيير البريد الإلكتروني",
+      "changeEmailFailed": "فشل تغيير البريد الإلكتروني",
+      "deleteAccountFailed": "فشل حذف الحساب",
+      "sessionLoggedOut": "تم تسجيل الخروج من الجلسة",
+      "logoutSessionFailed": "فشل تسجيل الخروج من الجلسة",
+      "identityUnlinked": "تم إلغاء ربط مصدر الهوية",
+      "unlinkIdentityFailed": "فشل إلغاء ربط مصدر الهوية",
+      "startTwoFactorFailed": "فشل بدء المصادقة الثنائية",
+      "twoFactorEnabled": "تم تفعيل المصادقة الثنائية",
+      "enableTwoFactorFailed": "فشل تفعيل المصادقة الثنائية",
+      "twoFactorDisabled": "تم إيقاف المصادقة الثنائية",
+      "disableTwoFactorFailed": "فشل إيقاف المصادقة الثنائية",
+      "recoveryCodesRegenerated": "تمت إعادة إنشاء رموز الاسترداد",
+      "regenerateRecoveryCodesFailed": "فشل إعادة إنشاء رموز الاسترداد",
+      "providerUnavailable": "لا يمكن ربط مصدر الهوية هذا حاليًا",
+      "bindIdentityFailed": "فشل ربط مصدر الهوية"
+    }
+  },
+  "chatPage": {
+    "defaultModel": {
+      "sectionTitle": "المحادثة الأساسية",
+      "title": "النموذج الافتراضي للمحادثات الجديدة",
+      "description": "النموذج المحدد مسبقًا عند بدء محادثة جديدة. إذا تُرك فارغًا، فسيتم استخدام أول نموذج متاح توصي به المنصة.",
+      "systemRecommended": "افتراضي النظام",
+      "autoTitle": "إنشاء العنوان تلقائيًا",
+      "autoTitleDescription": "عند الإيقاف، تستخدم المحادثة الجديدة أول 16 حرفًا من الرسالة الأولى كعنوان.",
+      "autoLabels": "إنشاء العلامات تلقائيًا",
+      "autoLabelsDescription": "عند الإيقاف، لن ينشئ النظام علامات المحادثات تلقائيًا، مما قد يقلل استدعاءات النموذج المساعد واستهلاك Token المرتبط بها."
+    },
+    "input": {
+      "sectionTitle": "الإدخال والإرسال",
+      "shortcutTitle": "اختصار الإرسال",
+      "shortcutDescription": "تستخدم المنصة الحالية {shortcut} لإرسال الرسائل.",
+      "heightTitle": "ارتفاع منطقة الإدخال",
+      "heightDescription": "الحد الأقصى للارتفاع الذي يمكن أن يشغله مربع الإدخال عند التمدد تلقائيًا.",
+      "height": {
+        "compact": "مضغوط",
+        "standard": "قياسي",
+        "loose": "واسع"
+      },
+      "restoreDraftTitle": "استعادة المسودة تلقائيًا",
+      "restoreDraftDescription": "تحديد ما إذا كان سيتم استعادة النص والمرفقات التي تم إرسالها تلقائيًا عند فشل الإرسال.",
+      "preserveDraftTitle": "الاحتفاظ بمسودة المحادثة",
+      "preserveDraftDescription": "تحديد ما إذا كان سيتم الاحتفاظ بالمحتوى غير المرسل واستعادته عند التبديل بين المحادثات.",
+      "reuseModelOptionsTitle": "إعادة استخدام إعدادات النموذج",
+      "reuseModelOptionsDescription": "عند التفعيل، سيتم ملء إعدادات النموذج المستخدمة سابقًا تلقائيًا عند اختيار النموذج نفسه في محادثة جديدة.",
+      "deleteFilesDefaultTitle": "حذف الملفات افتراضيًا عند حذف المحادثة",
+      "deleteFilesDefaultDescription": "عند التفعيل، سيتم تحديد خيار حذف الملفات أيضًا افتراضيًا في نافذة تأكيد حذف المحادثة؛ وستبقى الملفات المستخدمة في محادثات أخرى."
+    },
+    "display": {
+      "sectionTitle": "العرض والتصيير",
+      "markdownTitle": "تصيير Markdown",
+      "markdownDescription": "تحديد ما إذا كانت ردود AI ستظهر كمحتوى Markdown منسق.",
+      "autoExpandThinkingTitle": "توسيع التفكير المتعمق تلقائيًا",
+      "autoExpandThinkingDescription": "توسيع التفكير المتعمق الحالي تلقائيًا أثناء إنشاء الرد.",
+      "autoExpandToolCallsTitle": "توسيع استدعاءات الأدوات تلقائيًا",
+      "autoExpandToolCallsDescription": "توسيع تفاصيل الاستدعاء الحالي تلقائيًا أثناء تشغيل الأداة.",
+      "modelTitle": "عرض النموذج المستخدم",
+      "modelDescription": "تحديد ما إذا كان سيتم عرض النموذج المستخدم أسفل رد AI.",
+      "tokenTitle": "عرض استهلاك Token",
+      "tokenDescription": "تحديد ما إذا كان سيتم عرض عدد Tokens المستهلكة في الطلب أسفل رد AI.",
+      "latencyTitle": "عرض إجمالي زمن الاستدعاء",
+      "latencyDescription": "تحديد ما إذا كان سيتم عرض إجمالي الوقت المستغرق في الاستدعاء أسفل رد AI.",
+      "costTitle": "عرض إجمالي تكلفة الاستدعاء",
+      "costDescription": "تحديد ما إذا كان سيتم عرض إجمالي تكلفة الاستدعاء أسفل رد AI.",
+      "costDescriptionSelfMode": "تحديد ما إذا كان سيتم عرض إجمالي تكلفة الاستدعاء أسفل رد AI. لا يتم عرضها في وضع الاستخدام الشخصي.",
+      "widthTitle": "عرض منطقة المحادثة",
+      "width": {
+        "compact": "مضغوط",
+        "standard": "قياسي",
+        "wide": "عريض"
+      },
+      "chatFont": "خط المحادثة",
+      "chatFontWeight": "سُمك خط المحادثة",
+      "font": {
+        "default": "افتراضي",
+        "songti": "Serif",
+        "heiti": "Sans-serif",
+        "mono": "أحادي المسافة"
+      },
+      "fontWeight": {
+        "regular": "عادي",
+        "medium": "متوسط",
+        "semibold": "نصف عريض",
+        "bold": "عريض"
+      }
+    },
+    "context": {
+      "sectionTitle": "إدارة السياق",
+      "autoCompactTitle": "ضغط السياق تلقائيًا",
+      "autoCompactDescription": "عند التفعيل، عندما تتجاوز المحادثة حدًا معينًا من الجولات أو Tokens، سيضغط النظام الرسائل الأقدم تلقائيًا في ملخص مع الاحتفاظ بآخر عدة جولات بصيغتها الأصلية لتقليل حجم السياق. عند الإيقاف، لن يتم ضغط سياق المحادثة تلقائيًا.",
+      "reasoningPassbackTitle": "تمرير سياق الاستدلال",
+      "reasoningPassbackDescription": "عند التفعيل، ستحمل نماذج الاستدلال المدعومة عبر Chat Completions محتوى الاستدلال من الجولة السابقة في الجولات اللاحقة لتحسين اتساق الاستدلال متعدد الخطوات."
+    },
+    "file": {
+      "sectionTitle": "معالجة الملفات",
+      "modeTitle": "وضع معالجة الملفات",
+      "mode": {
+        "auto": "تلقائي",
+        "fullContext": "إدراج المحتوى الكامل",
+        "rag": "الاسترجاع المتجهي"
+      },
+      "modeDescription": {
+        "auto": "الحالي: تلقائي — يختار النظام تلقائيًا بين إدراج المحتوى الكامل وRAG وفقًا لحجم الملف ونوعه وميزانية السياق وقدرات الاسترجاع (موصى به).",
+        "fullContext": "الحالي: إدراج المحتوى الكامل — يحاول النظام في كل جولة لاحقة وضع محتوى ملفات المحادثة في السياق، وهو مناسب للتحليل الدقيق للملفات الصغيرة.",
+        "rag": "الحالي: RAG — يعطي النظام الأولوية في كل جولة لاحقة لاسترجاع المقاطع المرتبطة بملفات المحادثة؛ وعند عدم توفر الاسترجاع، يعود إلى إدراج المحتوى الكامل."
+      }
+    },
+    "memory": {
+      "sectionTitle": "ذاكرة تفضيلات AI",
+      "save": "حفظ",
+      "cancel": "إلغاء",
+      "delete": "حذف",
+      "edit": "تعديل التفضيل",
+      "confirmDelete": "هل تريد تأكيد حذف هذا التفضيل؟",
+      "separator": ":",
+      "addTitle": "إضافة تفضيل",
+      "addDescription": "بعد الحفظ، سيُستخدم كتفضيل طويل المدى عند إنشاء ردود AI.",
+      "name": "الاسم",
+      "namePlaceholder": "مثال: أسلوب الرد",
+      "content": "محتوى التفضيل",
+      "contentPlaceholder": "مثال: مختصر ومباشر، وتجنب الحشو",
+      "adding": "جارٍ الإضافة",
+      "add": "إضافة",
+      "added": "تمت إضافة التفضيل",
+      "addFailed": "فشلت الإضافة",
+      "updated": "تم التحديث",
+      "updateFailed": "فشل التحديث",
+      "deleted": "تم الحذف",
+      "deleteFailed": "فشل الحذف",
+      "full": "ممتلئ",
+      "addPreference": "إضافة تفضيل",
+      "empty": "لا توجد تفضيلات محفوظة بعد."
+    },
+    "toasts": {
+      "saveFailed": "فشل الحفظ",
+      "retryLater": "يرجى المحاولة مرة أخرى لاحقًا."
+    }
+  },
+  "subscriptionPage": {
+    "title": "الاشتراك",
+    "actions": {
+      "cancel": "إلغاء",
+      "processing": "جارٍ المعالجة"
+    },
+    "interval": {
+      "lifetime": "مدى الحياة",
+      "year": "سنوي",
+      "month": "شهري"
+    },
+    "currentSubscription": {
+      "title": "الاشتراك الحالي",
+      "none": "غير مشترك",
+      "empty": "لا توجد خطط اشتراك متاحة حاليًا",
+      "subscribe": "اشتراك"
+    },
+    "periodUsage": {
+      "title": "استخدام الخطة",
+      "currentPeriod": "دورة الفوترة الحالية",
+      "used": "المستخدم {value}",
+      "total": "إجمالي الحد {value}"
+    },
+    "periodOverage": {
+      "title": "الاستخدام الإضافي حسب الاستهلاك",
+      "balance": "الرصيد المتاح {value}"
+    },
+    "entitlements": {
+      "title": "مزايا الاشتراك",
+      "count": "{count} فترة",
+      "current": "حالي",
+      "upcoming": "قادم",
+      "range": "{start} - {end}",
+      "credit": "رصيد {credit}"
+    },
+    "usageBilling": {
+      "title": "الدفع حسب الاستخدام",
+      "balance": "رصيد الحساب {value}",
+      "topUp": "شحن الرصيد"
+    },
+    "selfMode": {
+      "title": "وضع الفوترة",
+      "value": "وضع الاستخدام الشخصي"
+    },
+    "usageTrend": {
+      "dailyTitle": "اتجاه الاستخدام اليومي",
+      "monthlyTitle": "اتجاه الاستخدام الشهري",
+      "daily": "يومي",
+      "monthly": "شهري",
+      "dailyUsage": "الاستخدام اليومي",
+      "monthlyUsage": "الاستخدام الشهري",
+      "otherModels": "أخرى",
+      "empty": "لا توجد بيانات استخدام.",
+      "metrics": {
+        "totalCost": "إجمالي التكلفة",
+        "totalTokens": "إجمالي Tokens",
+        "totalCalls": "إجمالي الاستدعاءات",
+        "averageLatency": "متوسط زمن الاستجابة"
+      },
+      "tooltip": {
+        "cost": "التكلفة",
+        "calls": "الاستدعاءات",
+        "latency": "متوسط زمن الاستجابة"
+      }
+    },
+    "usageLog": {
+      "title": "سجل الاستدعاءات",
+      "searchModel": "البحث عن نموذج",
+      "type": "النوع",
+      "filters": {
+        "all": "الكل",
+        "free": "نماذج مجانية",
+        "billable": "نماذج مدفوعة"
+      },
+      "sort": {
+        "newest": "أحدث استدعاء",
+        "oldest": "أقدم استدعاء",
+        "tokensDesc": "الأكثر Tokens",
+        "costDesc": "الأعلى تكلفة",
+        "latencyDesc": "الأطول زمنًا"
+      },
+      "columns": {
+        "time": "الوقت",
+        "model": "النموذج",
+        "baseBilling": "الفوترة الأساسية",
+        "serviceBilling": "فوترة الخدمة",
+        "balanceAfter": "الرصيد بعد التسوية",
+        "latency": "المدة"
+      },
+      "empty": "لا توجد سجلات استدعاءات"
+    },
+    "billingTooltip": {
+      "cacheWrite": "التخزين المؤقت (كتابة)",
+      "cacheWrite5m": "التخزين المؤقت (كتابة 5 دقائق)",
+      "cacheWrite1h": "التخزين المؤقت (كتابة ساعة)",
+      "cacheWrite5m1h": "التخزين المؤقت (كتابة 5 دقائق/ساعة)",
+      "cacheWritePricingLabel": "التخزين المؤقت (كتابة 5 دقائق)",
+      "cacheWritePricingNote": "يتم تحديد سعر قراءة ذاكرة Claude المؤقتة وفق إعدادات النظام؛ وتتم محاسبة الكتابة لمدة 5 دقائق بسعر النظام ×1.25، ولمدة ساعة ×2؛ بينما يعتمد Fast Mode على ذلك ثم ×6.",
+      "claudeCacheWriteMixedNote": "تتم محاسبة كتابة ذاكرة Claude المؤقتة وفق سعر النظام ×{multiplier}.",
+      "claudeCacheWriteNote": "تتم محاسبة كتابة ذاكرة Claude المؤقتة لمدة {timeout} وفق سعر النظام ×{multiplier}.",
+      "claudeFastModeNote": "Claude Fast Mode: تتم محاسبة الإدخال والإخراج والذاكرة المؤقتة وفق ×{multiplier}.",
+      "openaiServiceTierNote": "OpenAI service_tier={tier}: تتم المحاسبة وفق ×{multiplier}.",
+      "baseService": "الخدمة الأساسية",
+      "input": "الإدخال",
+      "output": "الإخراج",
+      "cacheRead": "التخزين المؤقت (قراءة)",
+      "rateNote": "تفاصيل المعدل",
+      "cacheNote": "تفاصيل التخزين المؤقت",
+      "total": "الإجمالي",
+      "subtotal": "المجموع الفرعي",
+      "freeModelNoBilling": "نموذج مجاني، بدون فوترة",
+      "perCall": "لكل استدعاء",
+      "perSecond": "لكل ثانية",
+      "callUnit": "استدعاء",
+      "secondUnit": "ثانية",
+      "tieredRangeBounded": "نطاق الإدخال الأصلي {from}-{upTo}",
+      "tieredRangeOpen": "نطاق الإدخال الأصلي {from}+",
+      "table": {
+        "item": "بند الفوترة",
+        "usage": "الاستخدام",
+        "unitPrice": "سعر الوحدة",
+        "amount": "المبلغ"
+      }
+    },
+    "plans": {
+      "title": "خطط الاشتراك",
+      "actions": {
+        "current": "الخطة الحالية",
+        "unavailable": "غير متاحة",
+        "renew": "تجديد",
+        "subscribe": "اشتراك",
+        "switch": "تبديل",
+        "upgrade": "ترقية",
+        "freeBlocked": "الخطة الأساسية"
+      },
+      "features": {
+        "monthlyCredit": "رصيد شهري {credit}",
+        "freeModelsNotIncluded": "النماذج المجانية لا تُحتسب ضمن الرصيد"
+      }
+    },
+    "payment": {
+      "title": "اختيار طريقة الدفع",
+      "renewTitle": "تجديد الاشتراك",
+      "upgradeTitle": "ترقية الاشتراك",
+      "description": "أكد طريقة الدفع للمتابعة.",
+      "renewDescription": "سيؤدي التجديد إلى إضافة مدة إضافية إلى الخطة الحالية.",
+      "renewAfterHigherDescription": "سيتم التجديد وفق هذه الخطة؛ وستظل مزايا ورصيد الخطة الأعلى الحالية كما هي، وستدخل الخطة الجديدة حيز التنفيذ بعد انتهاء المزايا الأعلى الحالية.",
+      "upgradeDescription": "ستدخل الخطة الأعلى حيز التنفيذ فورًا بعد الترقية، وسيتم الاحتفاظ بالمزايا غير المستخدمة وترحيلها.",
+      "method": "طريقة الدفع",
+      "card": "بطاقة بنكية",
+      "disabled": "غير مفعلة",
+      "continue": "متابعة الدفع",
+      "epay": {
+        "alipay": "Alipay",
+        "wxpay": "WeChat Pay",
+        "qqpay": "محفظة QQ",
+        "custom": "مخصص · {type}"
+      }
+    },
+    "topUp": {
+      "title": "شحن الرصيد",
+      "description": "أدخل مبلغ الشحن وأكد طريقة الدفع.",
+      "currentBalance": "الرصيد الحالي {value}",
+      "amount": "مبلغ الشحن",
+      "amountAria": "مبلغ الشحن",
+      "confirm": "شحن"
+    },
+    "redemption": {
+      "open": "استرداد",
+      "title": "رمز الاسترداد",
+      "description": "أدخل رمز الاسترداد الذي قدمه المسؤول.",
+      "code": "رمز الاسترداد",
+      "confirm": "استرداد"
+    },
+    "toasts": {
+      "retryLater": "يرجى المحاولة مرة أخرى لاحقًا.",
+      "subscriptionLoadFailed": "فشل تحميل معلومات الاشتراك",
+      "usageLogLoadFailed": "فشل تحميل سجل الاستدعاءات",
+      "checkoutCreateFailed": "فشل إنشاء عملية الدفع",
+      "checkoutURLMissing": "لم تُرجع قناة الدفع عنوان صفحة الدفع.",
+      "planUpdated": "تم تحديث خطة الاشتراك",
+      "subscribeFailed": "فشل الاشتراك",
+      "invalidTopUpAmount": "مبلغ الشحن غير صالح",
+      "invalidTopUpAmountDescription": "أدخل مبلغًا بالدولار أكبر من 0.",
+      "planUnavailable": "الخطة غير متاحة",
+      "planUnavailableDescription": "لا يوجد سعر متاح للخطة الحالية، يرجى التواصل مع المسؤول للتحقق من إعدادات الفوترة.",
+      "paymentDisabled": "قناة الدفع غير مفعلة",
+      "paymentDisabledDescription": "يجب إكمال إعداد الدفع من لوحة الإدارة أولًا حتى تتمكن من الاشتراك في الخطط المدفوعة.",
+      "freeSwitchBlocked": "لديك مزايا اشتراك فعالة حاليًا",
+      "freeSwitchBlockedDescription": "لا يمكنك التبديل إلى الخطة المجانية قبل انتهاء المزايا المدفوعة، ويمكنك اختيار التجديد أو الاشتراك في خطة مدفوعة أخرى.",
+      "noPlanSelected": "لم يتم اختيار خطة",
+      "noPlanSelectedDescription": "يرجى اختيار الخطة التي تريد الاشتراك فيها أولًا.",
+      "invalidRedemptionCode": "يرجى إدخال رمز الاسترداد.",
+      "redemptionSucceeded": "تم الاسترداد بنجاح",
+      "redemptionFailed": "فشل الاسترداد"
+    }
+  }
+}

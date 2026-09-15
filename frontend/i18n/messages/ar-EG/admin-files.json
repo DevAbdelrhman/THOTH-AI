@@ -1,0 +1,480 @@
+{
+  "groups": {
+    "uploadLimits": {
+      "title": "حدود الرفع",
+      "description": "التحكم في عدد مرفقات المحادثة، وقائمة MIME المسموح بها، والحد الأقصى لحجم الملفات."
+    },
+    "extraction": {
+      "title": "استخراج المحتوى",
+      "description": "التحكم في مسار استخراج محتوى الملفات، ومحرك OCR المشترك، ونطاق تفعيل OCR."
+    },
+    "fullContext": {
+      "title": "حقن النص الكامل",
+      "description": "التحكم في إمكانية حقن نص الملف المستخرج مباشرةً في السياق بدلًا من استخدام RAG."
+    },
+    "embedding": {
+      "title": "البحث المتجهي",
+      "description": "تكوين ما إذا كانت خدمة Embedding الخارجية مفعلة؛ تغيير النموذج يجعل المتجهات القديمة غير صالحة."
+    },
+    "semantic": {
+      "title": "التعزيز الدلالي",
+      "description": "استرجاع المقاطع الدلالية من الرسائل التاريخية بناءً على البحث المتجهي، ويتطلب جاهزية تحويل الرسائل إلى متجهات."
+    },
+    "rag": {
+      "title": "RAG",
+      "description": "التحكم في الاسترجاع، وحد التشابه، وميزانية الحقن، واستراتيجية انتظار الجاهزية."
+    }
+  },
+  "runtime": {
+    "address": "العنوان",
+    "testConnection": "اختبار الاتصال"
+  },
+  "embeddingStatus": {
+    "title": "حالة الفهرس المتجهي",
+    "noSignature": "لم يتم إنشاء التوقيع بعد (سيتم حسابه تلقائيًا بعد حفظ الإعدادات لأول مرة)",
+    "reindex": "إعادة بناء الفهرس",
+    "reindexing": "جارٍ إعادة البناء...",
+    "ready": "جاهز",
+    "stale": "غير صالح",
+    "pending": "قيد المعالجة",
+    "failed": "فشل",
+    "empty": "لا توجد بيانات حاليًا (تتوفر بعد تكوين خدمة Embedding)",
+    "needsReindex": "تم اكتشاف متجهات غير صالحة، يرجى النقر على «إعادة بناء الفهرس» لاستعادة إمكانية البحث."
+  },
+  "toast": {
+    "sessionExpired": "انتهت صلاحية جلسة تسجيل الدخول",
+    "sessionExpiredDescription": "يرجى تسجيل الدخول مرة أخرى قبل المتابعة.",
+    "unknownError": "فشل الطلب، يرجى المحاولة مرة أخرى لاحقًا.",
+    "cannotEnable": "تعذر التفعيل",
+    "saveFailed": "فشل الحفظ",
+    "loadFailed": "فشل تحميل سياسة الملفات",
+    "serviceTestFailed": "فشل اختبار {service}",
+    "reindexSubmitted": "تم إرسال طلب إعادة بناء الفهرس",
+    "reindexSubmittedDescription": "تم إرسال مهام إعادة بناء {count} ملف، وسيتم تنفيذها بشكل غير متزامن في الخلفية.",
+    "reindexFailed": "فشلت إعادة بناء الفهرس",
+    "embeddingModelChanged": "تم تغيير نموذج Embedding",
+    "embeddingModelChangedDescription": "تم وضع المتجهات القديمة كغير صالحة، يرجى النقر على «إعادة بناء الفهرس» من لوحة حالة الفهرس لإعادة تحويل جميع الملفات إلى متجهات.",
+    "mimeTypesUpdated": "تم تحديث قائمة MIME المسموح بها للمرفقات",
+    "groupUpdated": "تم تحديث {group}"
+  },
+  "mineruMimeHint": {
+    "missing": "تفتقد قائمة الرفع أنواع MIME المطلوبة لصيغ MinerU المحددة: {formats}.",
+    "addAndSave": "إضافة أنواع MIME المفقودة وحفظها"
+  },
+  "validation": {
+    "embeddingRequired": "يرجى أولًا تفعيل خدمة Embedding وتكوين عنوان الخدمة ونموذج الطلب من «البحث المتجهي».",
+    "messageEmbeddingRequired": "يرجى أولًا تفعيل تحويل الرسائل إلى متجهات.",
+    "messageEmbeddingRequiredBeforeSemantic": "يرجى أولًا تفعيل تحويل الرسائل إلى متجهات قبل تفعيل استرجاع السياق الدلالي.",
+    "tikaBaseURLRequired": "لا يمكن أن يكون عنوان خدمة Tika فارغًا.",
+    "doclingBaseURLRequired": "لا يمكن أن يكون عنوان خدمة Docling فارغًا.",
+    "mineruBaseURLRequired": "لا يمكن أن يكون عنوان خدمة MinerU فارغًا.",
+    "tesseractBaseURLRequired": "لا يمكن أن يكون عنوان خدمة Tesseract OCR فارغًا.",
+    "rapidOCRBaseURLRequired": "لا يمكن أن يكون عنوان خدمة Rapid OCR فارغًا.",
+    "paddleOCRBaseURLRequired": "لا يمكن أن يكون عنوان خدمة Paddle OCR فارغًا.",
+    "tencentOCRRequired": "لا يمكن أن تكون SecretId وSecretKey والمنطقة الخاصة بـ Tencent Cloud OCR فارغة.",
+    "aliyunOCRRequired": "لا يمكن أن تكون AccessKey ID وAccessKey Secret والمنطقة الخاصة بـ Alibaba Cloud OCR فارغة.",
+    "mistralOCRBaseURLRequired": "لا يمكن أن يكون عنوان خدمة Mistral OCR فارغًا.",
+    "mistralOCRAPIKeyRequired": "لا يمكن أن يكون Mistral OCR API Key فارغًا.",
+    "mistralOCRModelRequired": "لا يمكن أن يكون نموذج طلب Mistral OCR فارغًا.",
+    "llmOCRBaseURLRequired": "لا يمكن أن يكون عنوان خدمة LLM OCR فارغًا.",
+    "llmOCRModelRequired": "لا يمكن أن يكون نموذج طلب LLM OCR فارغًا.",
+    "embeddingModelRequired": "لا يمكن أن يكون نموذج طلب Embedding فارغًا.",
+    "embeddingHostRequired": "لا يمكن أن يكون عنوان خدمة Embedding فارغًا."
+  },
+  "fields": {
+    "storage": {
+      "max_message_files": {
+        "label": "الحد الأقصى لعدد المرفقات",
+        "description": "لتحديد عدد المرفقات التي يمكن أن تحتوي عليها رسالة محادثة واحدة.",
+        "placeholder": "أدخل العدد"
+      },
+      "max_upload_file_bytes": {
+        "label": "الحد الأقصى الافتراضي للحجم",
+        "description": "لتحديد الحد الأقصى الافتراضي لحجم المرفق الواحد، والوحدة في الصفحة هي MB.",
+        "placeholder": "الحد الأقصى للحجم (MB)"
+      },
+      "user_storage_quota_bytes": {
+        "label": "حصة تخزين المستخدم",
+        "description": "لتحديد إجمالي مساحة تخزين الملفات التي يمكن لكل مستخدم شغلها، والوحدة في الصفحة هي MB؛ القيمة 0 تعني عدم وجود حد.",
+        "placeholder": "0 يعني عدم وجود حد"
+      }
+    },
+    "file": {
+      "allowed_mime_types": {
+        "label": "القائمة البيضاء لـ MIME للمرفقات",
+        "description": "لتحديد أنواع MIME للمرفقات المسموح برفعها، وتُفصل القيم المتعددة بفواصل.",
+        "placeholder": "أنواع MIME، مفصولة بفواصل"
+      },
+      "image_max_bytes": {
+        "label": "الحد الأقصى لحجم الصور",
+        "description": "لتجاوز الحد الأقصى لحجم مرفقات الصور بشكل منفصل، والوحدة في الصفحة هي MB؛ عند تركه فارغًا يتم الرجوع إلى الحد الافتراضي لحجم المرفقات.",
+        "placeholder": "اتركه فارغًا للرجوع إلى الحد الافتراضي لحجم المرفقات"
+      },
+      "doc_max_bytes": {
+        "label": "الحد الأقصى لحجم المستندات",
+        "description": "لتجاوز الحد الأقصى لحجم مرفقات المستندات بشكل منفصل، والوحدة في الصفحة هي MB؛ عند تركه فارغًا يتم الرجوع إلى الحد الافتراضي لحجم المرفقات.",
+        "placeholder": "اتركه فارغًا للرجوع إلى الحد الافتراضي لحجم المرفقات"
+      },
+      "full_context_limit_enabled": {
+        "label": "حدود حقن النص الكامل",
+        "description": "عند التفعيل، يتم تقييد حقن النص الكامل حسب الحجم وToken وعدد صفحات PDF؛ وعند التعطيل لا يتم فرض حدود حقن النص الكامل."
+      },
+      "file_full_context_max_bytes": {
+        "label": "الحد الأقصى لحجم النص الكامل",
+        "description": "لتحديد الحد الأقصى لحجم النص المستخرج المسموح بحقنه كاملًا، والوحدة في الصفحة هي MB؛ تركه فارغًا أو ضبطه على 0 يعني عدم تقييد الحجم.",
+        "placeholder": "الحد الأقصى للحجم (MB)؛ فارغ أو 0 يعني عدم وجود حد"
+      },
+      "full_context_max_tokens": {
+        "label": "الحد الأقصى لـ Token للنص الكامل",
+        "description": "لتحديد الحد الأقصى لميزانية Token المسموح بها لحقن النص الكامل؛ تركه فارغًا أو ضبطه على 0 يعني عدم تقييد Token.",
+        "placeholder": "فارغ أو 0 يعني عدم وجود حد"
+      },
+      "full_context_pdf_max_pages": {
+        "label": "الحد الأقصى لصفحات النص الكامل",
+        "description": "لتحديد الحد الأقصى لعدد صفحات PDF المسموح بحقنها كاملًا؛ تركه فارغًا أو ضبطه على 0 يعني عدم تقييد عدد الصفحات.",
+        "placeholder": "فارغ أو 0 يعني عدم وجود حد"
+      },
+      "embedding_enabled": {
+        "label": "تفعيل Embedding",
+        "description": "عند التفعيل، يتم تشغيل تحويل الملفات إلى متجهات وإمكانية البحث المتجهي؛ وعند التعطيل تتوقف المسارات المرتبطة بذلك."
+      },
+      "embedding_host": {
+        "label": "عنوان خدمة Embedding *",
+        "description": "لتكوين عنوان خدمة Embedding، ويجب أن تكون الخدمة متوافقة مع واجهة OpenAI \u0060/embeddings\u0060.",
+        "placeholder": "عنوان الخدمة"
+      },
+      "embedding_key": {
+        "label": "مفتاح مصادقة Embedding",
+        "description": "لتكوين مفتاح المصادقة المستخدم عند استدعاء خدمة Embedding.",
+        "placeholder": "مفتاح المصادقة"
+      },
+      "rag_model": {
+        "label": "نموذج Embedding *",
+        "description": "لتحديد اسم النموذج المستخدم لتحويل البيانات إلى متجهات.",
+        "placeholder": "اسم النموذج"
+      },
+      "embedding_timeout_seconds": {
+        "label": "مهلة Embedding",
+        "description": "لتحديد أقصى مدة انتظار لطلب Embedding API الواحد، والوحدة هي الثانية.",
+        "placeholder": "مدة المهلة (بالثواني)"
+      },
+      "embedding_output_dimensions": {
+        "label": "أبعاد المتجه",
+        "description": "لتحديد أبعاد المتجه المستخدمة بشكل موحد عند التخزين والبحث.",
+        "placeholder": "أبعاد المتجه"
+      },
+      "embedding_normalize": {
+        "label": "تطبيع المتجهات",
+        "description": "عند التفعيل، يتم إجراء تطبيع للمتجهات."
+      },
+      "embed_trigger_on_upload": {
+        "label": "التحويل التلقائي إلى متجهات",
+        "description": "تشغيل Embedding بشكل غير متزامن فور اكتمال رفع الملف."
+      },
+      "embed_batch_size": {
+        "label": "حجم الدفعة",
+        "description": "لتحديد عدد النصوص المرسلة في طلب Embedding API الواحد.",
+        "placeholder": "حجم الدفعة"
+      },
+      "embed_chunk_size_tokens": {
+        "label": "حجم المقاطع",
+        "description": "لتحديد حجم المقاطع عند تحويل المستندات إلى متجهات، محسوبًا حسب Token.",
+        "placeholder": "حجم المقطع (Token)"
+      },
+      "embed_chunk_overlap_tokens": {
+        "label": "تداخل المقاطع",
+        "description": "لتحديد مقدار تداخل Token بين المقاطع المتجاورة.",
+        "placeholder": "تداخل المقاطع (Token)"
+      },
+      "rag_top_k": {
+        "label": "عدد المقاطع المسترجعة",
+        "description": "لتحديد عدد المقاطع التي يعيدها RAG نهائيًا ويتم حقنها في السياق.",
+        "placeholder": "عدد المقاطع المسترجعة"
+      }
+    },
+    "extract": {
+      "engine": {
+        "label": "محرك الاستخراج",
+        "description": "لاختيار محرك المسار الرئيسي لاستخراج محتوى الملفات.",
+        "options": {
+          "builtin": "مدمج",
+          "tika": "Tika",
+          "docling": "Docling",
+          "mineru": "MinerU"
+        }
+      },
+      "tika_base_url": {
+        "label": "عنوان خدمة Tika *",
+        "description": "لتكوين عنوان خدمة Apache Tika.",
+        "placeholder": "عنوان الخدمة"
+      },
+      "tika_auth_token": {
+        "label": "مفتاح مصادقة Tika",
+        "description": "لتكوين مفتاح المصادقة المرفق عند استدعاء خدمة Tika.",
+        "placeholder": "مفتاح المصادقة (اختياري)"
+      },
+      "tika_timeout_seconds": {
+        "label": "مهلة Tika",
+        "description": "لتحديد أقصى مدة انتظار لطلب تحليل Tika الواحد، والوحدة هي الثانية.",
+        "placeholder": "مدة المهلة (بالثواني)"
+      },
+      "docling_base_url": {
+        "label": "عنوان خدمة Docling *",
+        "description": "لتكوين عنوان خدمة Docling.",
+        "placeholder": "عنوان الخدمة"
+      },
+      "docling_auth_token": {
+        "label": "مفتاح مصادقة Docling",
+        "description": "لتكوين مفتاح المصادقة المرفق عند استدعاء خدمة Docling.",
+        "placeholder": "مفتاح المصادقة (اختياري)"
+      },
+      "docling_timeout_seconds": {
+        "label": "مهلة Docling",
+        "description": "لتحديد أقصى مدة انتظار لطلب تحليل Docling الواحد، والوحدة هي الثانية.",
+        "placeholder": "مدة المهلة (بالثواني)"
+      },
+      "mineru_source": {
+        "label": "نوع خدمة MinerU",
+        "description": "لاختيار خدمة MinerU السحابية أو الخدمة المستضافة ذاتيًا.",
+        "options": {
+          "cloud": "خدمة سحابية",
+          "self_hosted": "مستضافة ذاتيًا"
+        }
+      },
+      "mineru_base_url": {
+        "label": "عنوان خدمة MinerU *",
+        "description": "لتكوين عنوان خدمة MinerU.",
+        "placeholder": "عنوان الخدمة"
+      },
+      "mineru_file_types": {
+        "label": "أنواع ملفات MinerU",
+        "description": "لاختيار أنواع الملفات التي يتم إرسالها إلى MinerU لتحليلها.",
+        "options": {
+          "pdf": "PDF",
+          "word": "Word",
+          "presentation": "PowerPoint",
+          "excel": "Excel"
+        }
+      },
+      "mineru_auth_token": {
+        "label": "مفتاح مصادقة MinerU",
+        "description": "لتكوين Token أو API Key المستخدم عند استدعاء خدمة MinerU.",
+        "placeholder": "مفتاح المصادقة (اختياري)"
+      },
+      "mineru_timeout_seconds": {
+        "label": "مهلة MinerU",
+        "description": "لتحديد أقصى مدة انتظار لطلب تحليل MinerU الواحد، والوحدة هي الثانية.",
+        "placeholder": "مدة المهلة (بالثواني)"
+      },
+      "image_ocr_enabled": {
+        "label": "OCR للصور",
+        "description": "عند التفعيل، يتم إرسال مرفقات الصور إلى مسار OCR وإنشاء نتائج نصية قابلة للاستخدام في البحث."
+      },
+      "pdf_ocr_fallback_enabled": {
+        "label": "الرجوع إلى OCR في PDF",
+        "description": "عند التفعيل، يتم استخدام OCR كخيار احتياطي عندما يفشل استخراج النص الأصلي من PDF أو تكون جودته منخفضة."
+      },
+      "ocr_engine": {
+        "label": "محرك OCR",
+        "description": "لاختيار محرك التعرف المشترك بين OCR للصور وOCR الاحتياطي لملفات PDF.",
+        "options": {
+          "rapidocr": "Rapid OCR",
+          "tesseract": "Tesseract OCR",
+          "paddle": "Paddle OCR",
+          "tencent": "Tencent Cloud OCR",
+          "aliyun": "Alibaba Cloud OCR",
+          "mistral": "Mistral OCR",
+          "llm": "LLM OCR"
+        }
+      },
+      "tesseract_ocr_base_url": {
+        "label": "عنوان خدمة Tesseract OCR *",
+        "description": "لتكوين عنوان خدمة Tesseract OCR.",
+        "placeholder": "عنوان الخدمة"
+      },
+      "tesseract_ocr_auth_token": {
+        "label": "مفتاح مصادقة Tesseract OCR",
+        "description": "لتكوين مفتاح المصادقة المرفق عند استدعاء خدمة Tesseract OCR.",
+        "placeholder": "مفتاح المصادقة (اختياري)"
+      },
+      "tesseract_ocr_timeout_seconds": {
+        "label": "مهلة Tesseract OCR",
+        "description": "لتحديد أقصى مدة انتظار لطلب Tesseract OCR الواحد، والوحدة هي الثانية.",
+        "placeholder": "مدة المهلة (بالثواني)"
+      },
+      "rapidocr_base_url": {
+        "label": "عنوان خدمة Rapid OCR *",
+        "description": "لتكوين عنوان خدمة Rapid OCR.",
+        "placeholder": "عنوان الخدمة"
+      },
+      "rapidocr_auth_token": {
+        "label": "مفتاح مصادقة Rapid OCR",
+        "description": "لتكوين مفتاح المصادقة المرفق عند استدعاء خدمة Rapid OCR.",
+        "placeholder": "مفتاح المصادقة (اختياري)"
+      },
+      "rapidocr_timeout_seconds": {
+        "label": "مهلة Rapid OCR",
+        "description": "لتحديد أقصى مدة انتظار لطلب Rapid OCR الواحد، والوحدة هي الثانية.",
+        "placeholder": "مدة المهلة (بالثواني)"
+      },
+      "paddle_ocr_base_url": {
+        "label": "عنوان خدمة Paddle OCR *",
+        "description": "لتكوين عنوان خدمة Paddle OCR.",
+        "placeholder": "عنوان الخدمة"
+      },
+      "paddle_ocr_auth_token": {
+        "label": "مفتاح مصادقة Paddle OCR",
+        "description": "لتكوين مفتاح المصادقة المرفق عند استدعاء خدمة Paddle OCR.",
+        "placeholder": "مفتاح المصادقة (اختياري)"
+      },
+      "paddle_ocr_timeout_seconds": {
+        "label": "مهلة Paddle OCR",
+        "description": "لتحديد أقصى مدة انتظار لطلب Paddle OCR الواحد، والوحدة هي الثانية.",
+        "placeholder": "مدة المهلة (بالثواني)"
+      },
+      "tencent_ocr_secret_id": {
+        "label": "Tencent Cloud SecretId *",
+        "description": "لتكوين SecretId المطلوب لاستدعاء Tencent Cloud OCR API.",
+        "placeholder": "SecretId"
+      },
+      "tencent_ocr_secret_key": {
+        "label": "Tencent Cloud SecretKey *",
+        "description": "لتكوين SecretKey المطلوب لاستدعاء Tencent Cloud OCR API.",
+        "placeholder": "SecretKey"
+      },
+      "tencent_ocr_region": {
+        "label": "منطقة Tencent Cloud",
+        "description": "لتكوين منطقة الطلب الخاصة بـ Tencent Cloud OCR API.",
+        "placeholder": "المنطقة"
+      },
+      "tencent_ocr_endpoint": {
+        "label": "نقطة اتصال Tencent Cloud",
+        "description": "لتكوين عنوان نقطة اتصال Tencent Cloud OCR API.",
+        "placeholder": "نقطة الاتصال"
+      },
+      "tencent_ocr_timeout_seconds": {
+        "label": "مهلة Tencent Cloud OCR",
+        "description": "لتحديد أقصى مدة انتظار لطلب Tencent Cloud OCR الواحد، والوحدة هي الثانية.",
+        "placeholder": "مدة المهلة (بالثواني)"
+      },
+      "aliyun_ocr_access_key_id": {
+        "label": "Alibaba Cloud AccessKey ID *",
+        "description": "لتكوين AccessKey ID المطلوب لاستدعاء Alibaba Cloud OCR API.",
+        "placeholder": "AccessKey ID"
+      },
+      "aliyun_ocr_access_key_secret": {
+        "label": "Alibaba Cloud AccessKey Secret *",
+        "description": "لتكوين AccessKey Secret المطلوب لاستدعاء Alibaba Cloud OCR API.",
+        "placeholder": "AccessKey Secret"
+      },
+      "aliyun_ocr_region": {
+        "label": "منطقة Alibaba Cloud",
+        "description": "لتكوين منطقة الطلب الخاصة بـ Alibaba Cloud OCR API.",
+        "placeholder": "المنطقة"
+      },
+      "aliyun_ocr_endpoint": {
+        "label": "نقطة اتصال Alibaba Cloud",
+        "description": "لتكوين عنوان نقطة اتصال Alibaba Cloud OCR API.",
+        "placeholder": "نقطة الاتصال"
+      },
+      "aliyun_ocr_timeout_seconds": {
+        "label": "مهلة Alibaba Cloud OCR",
+        "description": "لتحديد أقصى مدة انتظار لطلب Alibaba Cloud OCR الواحد، والوحدة هي الثانية.",
+        "placeholder": "مدة المهلة (بالثواني)"
+      },
+      "mistral_ocr_base_url": {
+        "label": "عنوان خدمة Mistral OCR *",
+        "description": "لتكوين عنوان اتصال Mistral OCR، والقيمة الافتراضية هي https://api.mistral.ai/v1/ocr.",
+        "placeholder": "https://api.mistral.ai/v1/ocr"
+      },
+      "mistral_ocr_auth_token": {
+        "label": "Mistral OCR API Key *",
+        "description": "لتكوين API Key المستخدم عند استدعاء Mistral OCR.",
+        "placeholder": "API Key"
+      },
+      "mistral_ocr_model": {
+        "label": "نموذج طلب Mistral OCR *",
+        "description": "لتحديد اسم النموذج المستخدم لتنفيذ Mistral OCR.",
+        "placeholder": "mistral-ocr-latest"
+      },
+      "mistral_ocr_timeout_seconds": {
+        "label": "مهلة Mistral OCR",
+        "description": "لتحديد أقصى مدة انتظار لطلب Mistral OCR الواحد، والوحدة هي الثانية.",
+        "placeholder": "60"
+      },
+      "llm_ocr_base_url": {
+        "label": "عنوان خدمة LLM OCR *",
+        "description": "لتكوين عنوان خدمة نموذج رؤية متوافق مع OpenAI.",
+        "placeholder": "عنوان الخدمة"
+      },
+      "llm_ocr_auth_token": {
+        "label": "مفتاح مصادقة LLM OCR",
+        "description": "لتكوين API Key المستخدم عند استدعاء خدمة LLM OCR.",
+        "placeholder": "API Key (اختياري)"
+      },
+      "llm_ocr_model": {
+        "label": "نموذج طلب LLM OCR *",
+        "description": "لتحديد اسم نموذج الرؤية المستخدم لتنفيذ OCR.",
+        "placeholder": "اسم النموذج"
+      },
+      "llm_ocr_timeout_seconds": {
+        "label": "مهلة LLM OCR",
+        "description": "لتحديد أقصى مدة انتظار لطلب LLM OCR الواحد، والوحدة هي الثانية.",
+        "placeholder": "مدة المهلة (بالثواني)"
+      },
+      "llm_ocr_prompt": {
+        "label": "موجه LLM OCR",
+        "description": "لتكوين تعليمات OCR المرسلة إلى نموذج الرؤية.",
+        "placeholder": "الموجه (اختياري)"
+      }
+    },
+    "chat": {
+      "message_embedding_enabled": {
+        "label": "تحويل الرسائل إلى متجهات",
+        "description": "عند التفعيل، يتم إنشاء متجهات للرسائل بشكل غير متزامن بعد اكتمال كل جولة محادثة، ويتطلب ذلك خدمة Embedding متاحة."
+      },
+      "semantic_context_enabled": {
+        "label": "استرجاع السياق الدلالي",
+        "description": "عند التفعيل، يتم تلقائيًا استرجاع المقاطع التاريخية ذات الصلة عند إرسال الرسالة وحقنها في السياق، ويتطلب ذلك توفر بيانات متجهات الرسائل."
+      },
+      "rag_enabled": {
+        "label": "تفعيل RAG",
+        "description": "عند التفعيل، يُسمح للملفات بالدخول في مسار الاسترجاع المعزز، ويتطلب ذلك خدمة Embedding متاحة."
+      },
+      "rag_min_similarity": {
+        "label": "حد التشابه",
+        "description": "لتحديد الحد الأدنى للتشابه المطلوب لحقن المقاطع.",
+        "placeholder": "حد التشابه"
+      },
+      "rag_token_budget": {
+        "label": "ميزانية Token للحقن",
+        "description": "لتحديد ميزانية Token التي يمكن أن تشغلها المقاطع المسترجعة عند حقنها في السياق.",
+        "placeholder": "ميزانية Token"
+      },
+      "rag_fetch_multiplier": {
+        "label": "مضاعف الجلب",
+        "description": "لتحديد معامل جلب المرشحين؛ سيجلب النظام أولًا عددًا أكبر من النتائج المرشحة ثم ينفذ تصفية ثانية.",
+        "placeholder": "مضاعف الجلب"
+      },
+      "rag_wait_ready_ms": {
+        "label": "مدة انتظار الجاهزية",
+        "description": "لتحديد أقصى مدة انتظار لنتائج التحويل إلى متجهات حتى تصبح جاهزة عند إرسال الطلب، والوحدة هي المللي ثانية.",
+        "placeholder": "مدة الانتظار (مللي ثانية)"
+      },
+      "rag_query_history_turns": {
+        "label": "عدد الجولات التاريخية المضافة",
+        "description": "لتحديد عدد أحدث جولات المستخدم التي يمكن إضافتها عند إنشاء استعلام البحث.",
+        "placeholder": "الجولات التاريخية"
+      },
+      "rag_retrieval_cache_ttl_seconds": {
+        "label": "مدة تخزين نتائج البحث مؤقتًا",
+        "description": "لتحديد مدة تخزين نتائج بحث RAG مؤقتًا، والوحدة هي الثانية.",
+        "placeholder": "مدة التخزين المؤقت (بالثواني)"
+      },
+      "rag_hybrid_enabled": {
+        "label": "البحث الهجين (BM25 + متجهات)",
+        "description": "عند التفعيل، يتم تنفيذ البحث المتجهي والبحث في النص الكامل بالتوازي، ثم دمج النتائج باستخدام RRF."
+      }
+    }
+  }
+}

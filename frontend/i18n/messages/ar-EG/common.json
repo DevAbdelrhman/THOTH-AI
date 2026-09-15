@@ -1,0 +1,170 @@
+{
+  "actions": {
+    "cancel": "إلغاء",
+    "confirm": "تأكيد",
+    "save": "حفظ",
+    "saving": "جارٍ الحفظ",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "close": "إغلاق",
+    "copy": "نسخ",
+    "copied": "تم النسخ",
+    "retry": "إعادة المحاولة",
+    "refresh": "تحديث",
+    "search": "بحث",
+    "reset": "إعادة تعيين",
+    "create": "إنشاء",
+    "update": "تحديث",
+    "open": "فتح",
+    "back": "رجوع",
+    "continue": "متابعة"
+  },
+
+  "states": {
+    "loading": "جارٍ التحميل",
+    "empty": "لا توجد بيانات",
+    "unknown": "غير معروف",
+    "active": "نشط",
+    "inactive": "غير نشط",
+    "enabled": "مفعّل",
+    "disabled": "معطّل",
+    "unsaved": "لم يتم الحفظ",
+    "success": "نجح",
+    "failed": "فشل"
+  },
+
+  "locale": {
+    "label": "اللغة",
+    "english": "English",
+    "chinese": "简体中文"
+  },
+
+  "errors": {
+    "unknown": "فشلت العملية، يرجى المحاولة مرة أخرى لاحقًا.",
+    "sessionExpired": "انتهت صلاحية جلسة تسجيل الدخول، يرجى تسجيل الدخول مرة أخرى.",
+    "copyFailed": "تعذر النسخ، يرجى تحديد المحتوى ونسخه يدويًا."
+  },
+
+  "navigation": {
+    "newChat": "محادثة جديدة",
+    "search": "بحث",
+    "recent": "المحادثات",
+    "files": "الملفات",
+    "knowledgeBases": "قواعد المعرفة",
+    "skillsPrompt": "المهارات والتعليمات",
+    "searchTitle": "بحث",
+    "searchDescription": "ابحث في عناوين المحادثات والعلامات والمشاريع ومحتوى الرسائل",
+    "searchPlaceholder": "ابحث في المحادثات أو محتوى الرسائل",
+    "searchLoading": "جارٍ البحث عن النتائج ذات الصلة...",
+    "searchLoadingMore": "جارٍ تحميل المزيد من المحادثات...",
+    "searchLoadFailed": "تعذر تحميل المحادثات حاليًا",
+    "searchLoadMoreFailed": "تعذر تحميل المزيد من المحادثات",
+    "searchEmpty": "لم يتم العثور على نتائج مطابقة",
+    "searchPreviewHint": "مرّر مؤشر الماوس فوق محادثة على اليسار لمعاينة أحدث الرسائل",
+    "searchPreviewLoading": "جارٍ تحميل أحدث الرسائل...",
+    "searchPreviewLoadFailed": "تعذر تحميل أحدث الرسائل",
+    "searchPreviewEmpty": "لا توجد رسائل قابلة للمعاينة في هذه المحادثة",
+    "searchRoleUser": "أنت",
+    "searchRoleAssistant": "المساعد",
+    "searchShortcutNavigate": "تنقل",
+    "searchShortcutOpen": "فتح",
+    "searchCompactView": "التبديل إلى القائمة المختصرة",
+    "searchPreviewView": "توسيع معاينة المحادثة",
+    "sidebarTitle": "الشريط الجانبي",
+    "mobileSidebarDescription": "عرض الشريط الجانبي على الأجهزة المحمولة.",
+    "openSidebar": "فتح الشريط الجانبي",
+    "toggleSidebar": "تبديل الشريط الجانبي",
+    "settings": "الإعدادات",
+    "announcements": "الإعلانات",
+    "language": "اللغة",
+    "upgradePlan": "ترقية الخطة",
+    "admin": "لوحة الإدارة",
+    "logout": "تسجيل الخروج",
+    "loggingOut": "جارٍ تسجيل الخروج",
+    "fallbackUser": "المستخدم",
+    "today": "اليوم",
+    "archived": "مؤرشف",
+    "yesterday": "أمس"
+  },
+
+  "time": {
+    "todayTime": "{time}",
+    "thisYearDateTime": "{month}/{day} {time}",
+    "fullDateTime": "{year}/{month}/{day} {time}"
+  },
+
+  "table": {
+    "search": "بحث",
+    "searchPlaceholder": "ابحث بكلمة مفتاحية",
+    "clearSearch": "مسح البحث",
+    "filter": "تصفية",
+    "sort": "ترتيب",
+    "bulk": "إجراءات جماعية",
+    "refresh": "تحديث",
+    "selectedItems": "تم تحديد {count} عنصر",
+    "pagination": "إجمالي {total}، الصفحة {page} من {pageCount}",
+    "pageSize": "{size} عنصر / صفحة",
+    "previousPage": "الصفحة السابقة",
+    "nextPage": "الصفحة التالية"
+  },
+
+  "select": {
+    "placeholder": "اختر",
+    "searchPlaceholder": "بحث",
+    "empty": "لا توجد خيارات مطابقة"
+  },
+
+  "input": {
+    "configuredPasswordPlaceholder": "تم الإعداد، اتركه فارغًا لعدم التعديل"
+  },
+
+  "runtime": {
+    "status": {
+      "available": "متاح",
+      "running": "قيد التشغيل",
+      "restarting": "جارٍ إعادة التشغيل",
+      "created": "تم الإنشاء",
+      "paused": "متوقف مؤقتًا",
+      "unhealthy": "غير سليم",
+      "failed": "فشل",
+      "unavailable": "غير متاح",
+      "unconfigured": "غير مُعد",
+      "stopped": "متوقف"
+    },
+
+    "detail": {
+      "status": "الحالة",
+      "connection": "الاتصال",
+      "reachable": "يمكن الوصول إليه",
+      "unreachable": "لا يمكن الوصول إليه",
+      "detail": "التفاصيل"
+    }
+  },
+
+  "modelSelect": {
+    "searchPlaceholder": "ابحث عن نموذج",
+    "empty": "لا توجد نماذج مطابقة"
+  },
+
+  "timeZoneSelect": {
+    "placeholder": "اختر المنطقة الزمنية",
+    "searchPlaceholder": "ابحث عن منطقة زمنية",
+    "empty": "لا توجد مناطق زمنية مطابقة"
+  },
+
+  "dateRange": {
+    "placeholder": "اختر نطاقًا زمنيًا",
+    "clear": "مسح"
+  },
+
+  "jsonEditor": {
+    "errors": "{count} أخطاء",
+    "format": "تنسيق",
+    "loading": "جارٍ تحميل المحرر..."
+  },
+
+  "appVersion": {
+    "title": "تم اكتشاف إصدار جديد",
+    "description": "قم بتحديث الصفحة لاستخدام أحدث إصدار."
+  }
+}

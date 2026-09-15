@@ -1,0 +1,10 @@
+{
+  "title": "مشاركة المحادثة",
+  "snapshotMessages": "{count} رسالة في اللقطة",
+  "continueConversation": "متابعة المحادثة",
+  "continuing": "جارٍ المتابعة...",
+  "signInToContinue": "سجّل الدخول إلى THOTH Chat لمتابعة المحادثة",
+  "notFoundTitle": "المشاركة غير متاحة",
+  "notFoundDescription": "المشاركة غير موجودة أو تم إيقافها، أو تم حذف المحادثة الأصلية.",
+  "cloneFailed": "فشل متابعة المحادثة"
+}

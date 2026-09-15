@@ -1,16 +1,40 @@
 import enErrors from "@/i18n/messages/en-US/errors.json";
 import zhErrors from "@/i18n/messages/zh-CN/errors.json";
+import arErrors from "@/i18n/messages/ar-EG/errors.json";
+import frErrors from "@/i18n/messages/fr-FR/errors.json";
+import deErrors from "@/i18n/messages/de-DE/errors.json";
+import esErrors from "@/i18n/messages/es-ES/errors.json";
+import jaErrors from "@/i18n/messages/ja-JP/errors.json";
+import koErrors from "@/i18n/messages/ko-KR/errors.json";
+import trErrors from "@/i18n/messages/tr-TR/errors.json";
+import ruErrors from "@/i18n/messages/ru-RU/errors.json";
 import { DEFAULT_LOCALE, LOCALE_COOKIE_NAME, normalizeAppLocale, resolveBrowserLocale, type AppLocale } from "@/i18n/config";
 import { ApiError } from "@/shared/api/http-client";
 
 const ERROR_MESSAGES: Record<AppLocale, unknown> = {
   "en-US": enErrors,
   "zh-CN": zhErrors,
+  "ar-EG": arErrors,
+  "fr-FR": frErrors,
+  "de-DE": deErrors,
+  "es-ES": esErrors,
+  "ja-JP": jaErrors,
+  "ko-KR": koErrors,
+  "tr-TR": trErrors,
+  "ru-RU": ruErrors,
 };
 
 const FALLBACK_MESSAGES: Record<AppLocale, string> = {
   "en-US": "Request failed. Please try again later.",
   "zh-CN": "请求失败，请稍后重试。",
+  "ar-EG": "فشل الطلب. يرجى المحاولة مرة أخرى لاحقًا.",
+  "fr-FR": "La requête a échoué. Veuillez réessayer plus tard.",
+  "de-DE": "Die Anfrage ist fehlgeschlagen. Bitte versuchen Sie es später erneut.",
+  "es-ES": "La solicitud ha fallado. Inténtalo de nuevo más tarde.",
+  "ja-JP": "リクエストに失敗しました。後でもう一度お試しください。",
+  "ko-KR": "요청에 실패했습니다. 나중에 다시 시도해 주세요.",
+  "tr-TR": "İstek başarısız oldu. Lütfen daha sonra tekrar deneyin.",
+  "ru-RU": "Не удалось выполнить запрос. Повторите попытку позже.",
 };
 
 type RequestBodyFieldError = {
@@ -27,7 +51,7 @@ type RedemptionCodeErrorDetails = {
   reason?: unknown;
 };
 
-const REQUEST_FIELD_LABELS: Record<AppLocale, Record<string, string>> = {
+const REQUEST_FIELD_LABELS: Partial<Record<AppLocale, Record<string, string>>> = {
   "en-US": {
     apiKeys: "API keys",
     avatarURL: "Avatar URL",
@@ -88,7 +112,7 @@ const REQUEST_FIELD_LABELS: Record<AppLocale, Record<string, string>> = {
   },
 };
 
-const SETTINGS_FIELD_LABELS: Record<AppLocale, Record<string, string>> = {
+const SETTINGS_FIELD_LABELS: Partial<Record<AppLocale, Record<string, string>>> = {
   "en-US": {
     "auth:auto_link_verified_email": "Auto-link same email",
     "auth:email_login_enabled": "Email sign-in",
@@ -377,7 +401,7 @@ function resolveSettingsValidationMessage(error: ApiError, locale: AppLocale): s
     return undefined;
   }
   const detail = raw.replace(/^invalid setting:\s*/i, "").trim();
-  const dependencyMessages: Record<AppLocale, Record<string, string>> = {
+  const dependencyMessages: Partial<Record<AppLocale, Record<string, string>>> = {
     "en-US": {
       "auth:third_party_login_enabled must be enabled before disabling username and email login": "Enable third-party sign-in before disabling both username and email sign-in.",
       "embedding service must be enabled and configured before enabling rag or semantic enhancement": "Enable and configure embedding before enabling RAG or semantic context.",

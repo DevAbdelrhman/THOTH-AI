@@ -1,4 +1,5 @@
 import type { AppLocale } from "@/i18n/config";
+
 import enAdminAnnouncements from "@/i18n/messages/en-US/admin-announcements.json";
 import enAdminBilling from "@/i18n/messages/en-US/admin-billing.json";
 import enAdminContentModeration from "@/i18n/messages/en-US/admin-content-moderation.json";
@@ -26,6 +27,7 @@ import enPrompts from "@/i18n/messages/en-US/prompts.json";
 import enRecent from "@/i18n/messages/en-US/recent.json";
 import enSettings from "@/i18n/messages/en-US/settings.json";
 import enShare from "@/i18n/messages/en-US/share.json";
+
 import { replaceDefaultBrandTitle } from "@/shared/config/branding";
 
 const ENGLISH_MESSAGES = {
@@ -60,16 +62,25 @@ const ENGLISH_MESSAGES = {
 
 export type AppMessages = typeof ENGLISH_MESSAGES;
 
-export function applyBrandingToMessages(messages: AppMessages, brandTitle: string): AppMessages {
+export function applyBrandingToMessages(
+  messages: AppMessages,
+  brandTitle: string,
+): AppMessages {
   return {
     ...messages,
     guide: {
       ...messages.guide,
-      userWelcomeTitle: replaceDefaultBrandTitle(messages.guide.userWelcomeTitle, brandTitle),
+      userWelcomeTitle: replaceDefaultBrandTitle(
+        messages.guide.userWelcomeTitle,
+        brandTitle,
+      ),
     },
     recent: {
       ...messages.recent,
-      allConversationsDescription: replaceDefaultBrandTitle(messages.recent.allConversationsDescription, brandTitle),
+      allConversationsDescription: replaceDefaultBrandTitle(
+        messages.recent.allConversationsDescription,
+        brandTitle,
+      ),
     },
     login: {
       ...messages.login,
@@ -77,11 +88,17 @@ export function applyBrandingToMessages(messages: AppMessages, brandTitle: strin
     },
     share: {
       ...messages.share,
-      signInToContinue: replaceDefaultBrandTitle(messages.share.signInToContinue, brandTitle),
+      signInToContinue: replaceDefaultBrandTitle(
+        messages.share.signInToContinue,
+        brandTitle,
+      ),
     },
     chat: {
       ...messages.chat,
-      placeholder: replaceDefaultBrandTitle(messages.chat.placeholder, brandTitle),
+      placeholder: replaceDefaultBrandTitle(
+        messages.chat.placeholder,
+        brandTitle,
+      ),
     },
     settings: {
       ...messages.settings,
@@ -107,11 +124,37 @@ export function applyBrandingToMessages(messages: AppMessages, brandTitle: strin
 
 export const DEFAULT_MESSAGES: AppMessages = ENGLISH_MESSAGES;
 
-export async function loadLocaleMessages(locale: AppLocale): Promise<AppMessages> {
-  if (locale === "en-US") {
-    return DEFAULT_MESSAGES;
-  }
+type LocaleMessages = {
+  common: typeof enCommon;
+  conversation: typeof enConversation;
+  errors: typeof enErrors;
+  login: typeof enLogin;
+  prompts: typeof enPrompts;
+  guide: typeof enGuide;
+  chat: typeof enChat;
+  announcements: typeof enAnnouncements;
+  recent: typeof enRecent;
+  share: typeof enShare;
+  files: typeof enFiles;
+  knowledgeBases: typeof enKnowledgeBases;
+  settings: typeof enSettings;
+  adminAnnouncements: typeof enAdminAnnouncements;
+  adminBilling: typeof enAdminBilling;
+  adminConversation: typeof enAdminConversation;
+  adminFiles: typeof enAdminFiles;
+  adminGroups: typeof enAdminGroups;
+  adminLogin: typeof enAdminLogin;
+  adminLogs: typeof enAdminLogs;
+  adminModels: typeof enAdminModels;
+  adminPrompts: typeof enAdminPrompts;
+  adminStatistics: typeof enAdminStatistics;
+  adminTools: typeof enAdminTools;
+  adminUpstreams: typeof enAdminUpstreams;
+  adminUsers: typeof enAdminUsers;
+  adminContentModeration: typeof enAdminContentModeration;
+};
 
+async function loadLocaleFiles(locale: Exclude<AppLocale, "en-US">): Promise<LocaleMessages> {
   const [
     common,
     conversation,
@@ -141,33 +184,33 @@ export async function loadLocaleMessages(locale: AppLocale): Promise<AppMessages
     adminUsers,
     adminContentModeration,
   ] = await Promise.all([
-    import("@/i18n/messages/zh-CN/common.json"),
-    import("@/i18n/messages/zh-CN/conversation.json"),
-    import("@/i18n/messages/zh-CN/errors.json"),
-    import("@/i18n/messages/zh-CN/login.json"),
-    import("@/i18n/messages/zh-CN/prompts.json"),
-    import("@/i18n/messages/zh-CN/guide.json"),
-    import("@/i18n/messages/zh-CN/chat.json"),
-    import("@/i18n/messages/zh-CN/announcements.json"),
-    import("@/i18n/messages/zh-CN/recent.json"),
-    import("@/i18n/messages/zh-CN/share.json"),
-    import("@/i18n/messages/zh-CN/files.json"),
-    import("@/i18n/messages/zh-CN/knowledge-bases.json"),
-    import("@/i18n/messages/zh-CN/settings.json"),
-    import("@/i18n/messages/zh-CN/admin-announcements.json"),
-    import("@/i18n/messages/zh-CN/admin-billing.json"),
-    import("@/i18n/messages/zh-CN/admin-conversation.json"),
-    import("@/i18n/messages/zh-CN/admin-files.json"),
-    import("@/i18n/messages/zh-CN/admin-groups.json"),
-    import("@/i18n/messages/zh-CN/admin-login.json"),
-    import("@/i18n/messages/zh-CN/admin-logs.json"),
-    import("@/i18n/messages/zh-CN/admin-models.json"),
-    import("@/i18n/messages/zh-CN/admin-prompts.json"),
-    import("@/i18n/messages/zh-CN/admin-statistics.json"),
-    import("@/i18n/messages/zh-CN/admin-tools.json"),
-    import("@/i18n/messages/zh-CN/admin-upstreams.json"),
-    import("@/i18n/messages/zh-CN/admin-users.json"),
-    import("@/i18n/messages/zh-CN/admin-content-moderation.json"),
+    import(`@/i18n/messages/${locale}/common.json`),
+    import(`@/i18n/messages/${locale}/conversation.json`),
+    import(`@/i18n/messages/${locale}/errors.json`),
+    import(`@/i18n/messages/${locale}/login.json`),
+    import(`@/i18n/messages/${locale}/prompts.json`),
+    import(`@/i18n/messages/${locale}/guide.json`),
+    import(`@/i18n/messages/${locale}/chat.json`),
+    import(`@/i18n/messages/${locale}/announcements.json`),
+    import(`@/i18n/messages/${locale}/recent.json`),
+    import(`@/i18n/messages/${locale}/share.json`),
+    import(`@/i18n/messages/${locale}/files.json`),
+    import(`@/i18n/messages/${locale}/knowledge-bases.json`),
+    import(`@/i18n/messages/${locale}/settings.json`),
+    import(`@/i18n/messages/${locale}/admin-announcements.json`),
+    import(`@/i18n/messages/${locale}/admin-billing.json`),
+    import(`@/i18n/messages/${locale}/admin-conversation.json`),
+    import(`@/i18n/messages/${locale}/admin-files.json`),
+    import(`@/i18n/messages/${locale}/admin-groups.json`),
+    import(`@/i18n/messages/${locale}/admin-login.json`),
+    import(`@/i18n/messages/${locale}/admin-logs.json`),
+    import(`@/i18n/messages/${locale}/admin-models.json`),
+    import(`@/i18n/messages/${locale}/admin-prompts.json`),
+    import(`@/i18n/messages/${locale}/admin-statistics.json`),
+    import(`@/i18n/messages/${locale}/admin-tools.json`),
+    import(`@/i18n/messages/${locale}/admin-upstreams.json`),
+    import(`@/i18n/messages/${locale}/admin-users.json`),
+    import(`@/i18n/messages/${locale}/admin-content-moderation.json`),
   ]);
 
   return {
@@ -199,4 +242,14 @@ export async function loadLocaleMessages(locale: AppLocale): Promise<AppMessages
     adminUsers: adminUsers.default,
     adminContentModeration: adminContentModeration.default,
   };
+}
+
+export async function loadLocaleMessages(
+  locale: AppLocale,
+): Promise<AppMessages> {
+  if (locale === "en-US") {
+    return DEFAULT_MESSAGES;
+  }
+
+  return loadLocaleFiles(locale);
 }

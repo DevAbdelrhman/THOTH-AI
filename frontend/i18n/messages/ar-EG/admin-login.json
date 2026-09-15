@@ -1,0 +1,214 @@
+{
+  "groups": {
+    "loginPage": {
+      "title": "صفحة تسجيل الدخول",
+      "description": "التحكم في عنوان تبويب صفحة تسجيل الدخول والمسار الافتراضي بعد تسجيل الدخول."
+    },
+    "loginAndRegistration": {
+      "title": "تسجيل الدخول والتسجيل",
+      "description": "التحكم في طرق تسجيل الدخول بالحساب وتسجيل الحساب بالبريد الإلكتروني المتاحة في صفحة تسجيل الدخول."
+    },
+    "humanVerification": {
+      "title": "التحقق من أن المستخدم بشري",
+      "description": "تفعيل Cloudflare Turnstile لتسجيل الحساب بالبريد الإلكتروني، دون التأثير على تسجيل الدخول عبر مزودي الهوية الخارجيين."
+    },
+    "bindingAndVerification": {
+      "title": "الربط والتحقق",
+      "description": "التحكم في التحقق من البريد الإلكتروني وسياسات بريد التسجيل وسياسات ربط هويات الجهات الخارجية."
+    },
+    "loginSecurity": {
+      "title": "أمان تسجيل الدخول",
+      "description": "التحكم في مدة صلاحية رموز تسجيل الدخول وقفل الحساب عند الفشل وتحديد معدل طلبات HTTP 429 على مستوى المنصة."
+    }
+  },
+  "fields": {
+    "loginDefaultNextPath": {
+      "label": "مسار التحويل الافتراضي",
+      "description": "مسار التحويل الافتراضي بعد نجاح تسجيل الدخول عند الوصول إلى /login دون وجود معامل next."
+    },
+    "emailLoginEnabled": {
+      "label": "تسجيل الدخول بالبريد الإلكتروني",
+      "description": "السماح للمستخدمين بتسجيل الدخول باستخدام البريد الإلكتروني وكلمة المرور."
+    },
+    "emailRegistrationEnabled": {
+      "label": "التسجيل بالبريد الإلكتروني",
+      "description": "السماح للمستخدمين بإنشاء حساب باستخدام البريد الإلكتروني."
+    },
+    "passwordResetEnabled": {
+      "label": "إعادة تعيين كلمة المرور",
+      "description": "السماح للمستخدمين بإعادة تعيين كلمة المرور من صفحة تسجيل الدخول، مع ضرورة تفعيل التحقق من البريد الإلكتروني."
+    },
+    "usernameLoginEnabled": {
+      "label": "تسجيل الدخول باسم المستخدم",
+      "description": "السماح للمستخدمين بتسجيل الدخول باستخدام اسم المستخدم وكلمة المرور."
+    },
+    "thirdPartyLoginEnabled": {
+      "label": "تسجيل الدخول عبر جهة خارجية",
+      "description": "عند التفعيل، يمكن تكوين مزودي الهوية OIDC / OAuth2 وعرضهم."
+    },
+    "emailVerificationEnabled": {
+      "label": "تفعيل التحقق من البريد الإلكتروني",
+      "description": "يتطلب إدخال رمز التحقق المرسل عبر البريد الإلكتروني عند التسجيل."
+    },
+    "smtpHost": {
+      "label": "خادم SMTP",
+      "description": "عنوان خدمة SMTP المستخدمة لإرسال رموز التحقق الخاصة بالتسجيل."
+    },
+    "smtpPort": {
+      "label": "منفذ SMTP",
+      "description": "منفذ خدمة SMTP، وغالبًا ما يكون 465 أو 587."
+    },
+    "smtpUsername": {
+      "label": "اسم مستخدم SMTP",
+      "description": "حساب تسجيل الدخول إلى SMTP، وعادةً ما يكون عنوان بريد إلكتروني كاملًا."
+    },
+    "smtpPassword": {
+      "label": "كلمة مرور SMTP",
+      "description": "كلمة مرور تسجيل الدخول إلى SMTP أو كلمة مرور مخصصة للتطبيق."
+    },
+    "smtpFrom": {
+      "label": "المرسل",
+      "description": "عنوان مرسل رسائل رمز التحقق، ويُستخدم اسم مستخدم SMTP عند ترك الحقل فارغًا."
+    },
+    "emailRegistrationAllowedDomains": {
+      "label": "القائمة البيضاء لنطاقات التسجيل",
+      "description": "نطاقات البريد الإلكتروني المسموح بالتسجيل منها، ويعني ترك الحقل فارغًا عدم فرض قيود."
+    },
+    "emailRegistrationBlockPlusAlias": {
+      "label": "منع عناوين البريد المستعارة",
+      "description": "منع استخدام عناوين البريد الإلكتروني التي تحتوي على + كاسم مستعار للتسجيل."
+    },
+    "autoLinkVerifiedEmail": {
+      "label": "الربط التلقائي للبريد نفسه",
+      "description": "يتم الربط تلقائيًا بحساب موجود فقط عندما يكون البريد الإلكتروني العائد من هوية الجهة الخارجية مطابقًا للحساب المحلي، وتكون قيمة حقل التحقق من البريد لدى مزود الهوية، الافتراضية email_verified، هي true."
+    },
+    "turnstileRegistrationEnabled": {
+      "label": "التحقق البشري عند التسجيل",
+      "description": "عند التفعيل، يتطلب التسجيل بالبريد الإلكتروني اجتياز Cloudflare Turnstile، بينما لا يتطلب تسجيل الدخول عبر OIDC / OAuth2 ذلك."
+    },
+    "turnstileSiteKey": {
+      "label": "Turnstile Site Key",
+      "description": "مفتاح موقع Cloudflare Turnstile المستخدم في الواجهة الأمامية."
+    },
+    "turnstileSecretKey": {
+      "label": "Turnstile Secret Key",
+      "description": "مفتاح التحقق من Cloudflare Turnstile على الخادم، ولن يظهر بعد حفظه."
+    },
+    "tokenTTLHours": {
+      "label": "مدة صلاحية رمز الوصول",
+      "description": "مدة صلاحية Access Token بالساعات، من 1 إلى 168."
+    },
+    "refreshTokenTTLHours": {
+      "label": "مدة استمرار تسجيل الدخول",
+      "description": "مدة استمرار Refresh Token والجلسة بالساعات، من 1 إلى 8760."
+    },
+    "loginMaxFailures": {
+      "label": "حد محاولات الفشل قبل القفل",
+      "description": "يتم قفل الحساب بعد وصول عدد محاولات تسجيل الدخول الفاشلة المتتالية إلى هذا العدد."
+    },
+    "loginLockMinutes": {
+      "label": "مدة القفل",
+      "description": "مدة استمرار القفل الناتج عن فشل تسجيل الدخول، بالدقائق."
+    },
+    "rateLimitEnabled": {
+      "label": "تحديد معدل الطلبات على المنصة",
+      "description": "عند التفعيل، تُرجع المنصة HTTP 429، وعند التعطيل يمكن ترك معالجة تحديد المعدل لـ Traefik أو البوابة أو أي مكون خارجي آخر."
+    },
+    "rateLimitRPM": {
+      "label": "تحديد معدل طلبات واجهة المستخدم",
+      "description": "الحد الأساسي لعدد الطلبات في الدقيقة لواجهات المستخدم بعد تسجيل الدخول، ولا يكون فعالًا عند تعطيل تحديد المعدل على المنصة."
+    },
+    "publicAuthRateLimitRPM": {
+      "label": "تحديد معدل واجهات المصادقة العامة",
+      "description": "الحد الأساسي لعدد الطلبات في الدقيقة لواجهات تسجيل الدخول والتسجيل وتجديد الرموز وغيرها من واجهات المصادقة العامة، ولا يكون فعالًا عند تعطيل تحديد المعدل على المنصة."
+    }
+  },
+  "providers": {
+    "title": "مزودو الهوية OIDC / OAuth2",
+    "create": "إضافة مزود هوية",
+    "customOIDC": "OIDC مخصص",
+    "customOAuth2": "OAuth2 مخصص",
+    "name": "الاسم",
+    "type": "النوع",
+    "loginControl": "التحكم في تسجيل الدخول",
+    "registrationControl": "التحكم في التسجيل",
+    "dragToReorder": "اسحب {name} لتغيير الترتيب",
+    "loginControlFor": "التحكم في تسجيل الدخول لـ {name}",
+    "registrationControlFor": "التحكم في التسجيل لـ {name}",
+    "edit": "تعديل مزود الهوية",
+    "delete": "حذف مزود الهوية",
+    "empty": "لا توجد مزودات هوية حاليًا"
+  },
+  "providerDialog": {
+    "createTitle": "إضافة مزود هوية",
+    "editTitle": "تعديل مزود الهوية",
+    "description": "لن يظهر Client Secret بعد حفظه؛ عند التعديل، يعني ترك الحقل فارغًا الاحتفاظ بالمفتاح الحالي.",
+    "loginControlDescription": "السماح بتسجيل الدخول إلى حسابات المنصة",
+    "registrationControlDescription": "السماح بإنشاء الحسابات تلقائيًا",
+    "callbackURL": "عنوان Callback",
+    "serverCallbackURL": "عنوان Callback للخادم (موصى به)",
+    "legacyWebCallbackURL": "عنوان Callback القديم للويب (سيتم إيقافه قريبًا)",
+    "copyCallbackURL": "نسخ عنوان Callback",
+    "logoURL": "Logo URL",
+    "clientID": "Client ID",
+    "clientSecret": "Client Secret",
+    "oidcEndpoint": "عنوان OIDC",
+    "issuerURL": "Issuer URL",
+    "discoveryURL": "Discovery URL",
+    "authURL": "Auth URL",
+    "tokenURL": "Token URL",
+    "userinfoURL": "UserInfo URL",
+    "scopes": "Scopes",
+    "advancedSettings": "إعدادات متقدمة",
+    "sourceField": "حقل المصدر",
+    "systemField": "حقل النظام",
+    "systemFields": {
+      "userID": "معرف المستخدم",
+      "email": "البريد الإلكتروني",
+      "emailVerified": "حالة التحقق من البريد الإلكتروني",
+      "displayName": "الاسم المعروض",
+      "avatar": "الصورة الشخصية"
+    }
+  },
+  "deleteDialog": {
+    "title": "حذف مزود الهوية",
+    "thisProvider": "مزود الهوية هذا",
+    "description": "سيؤدي الحذف إلى إزالة إعدادات {name} وإلغاء ربط جميع الحسابات التي تستخدم مزود الهوية هذا. لا يمكن التراجع عن هذا الإجراء."
+  },
+  "forceDeleteDialog": {
+    "title": "الحذف الإجباري لمزود الهوية",
+    "description": "هناك حسابات تعتمد على مزود الهوية هذا فقط لتسجيل الدخول. بعد الحذف الإجباري، لن تتمكن هذه الحسابات من تسجيل الدخول عبر مزود الهوية هذا.",
+    "confirm": "حذف إجباري"
+  },
+  "validation": {
+    "defaultNextPath": "يجب أن يكون مسار التحويل الافتراضي مسارًا داخليًا، مثل /chat.",
+    "passwordLoginRequired": "قبل تعطيل تسجيل الدخول باسم المستخدم والبريد الإلكتروني، يجب أولًا تفعيل تسجيل الدخول عبر جهة خارجية والتأكد من ربط مدير واحد على الأقل بمزود هوية صالح.",
+    "missingSMTP": "بعد تفعيل التحقق من البريد الإلكتروني، يجب إدخال {fields}.",
+    "invalidSMTPPort": "يجب أن يكون منفذ SMTP عددًا صحيحًا بين 1 و65535.",
+    "missingTurnstile": "بعد تفعيل التحقق البشري عبر Turnstile، يجب إدخال {fields}.",
+    "turnstileRegistrationRequired": "يرجى تفعيل التسجيل بالبريد الإلكتروني أولًا قبل تفعيل التحقق البشري عبر Turnstile."
+  },
+  "punctuation": {
+    "listSeparator": "،"
+  },
+  "toast": {
+    "sessionExpired": "انتهت صلاحية تسجيل الدخول",
+    "signInAgain": "يرجى تسجيل الدخول مرة أخرى قبل المتابعة.",
+    "loadFailed": "فشل تحميل إعدادات المصادقة",
+    "saveFailed": "فشل الحفظ",
+    "settingsUpdated": "تم تحديث إعدادات المصادقة",
+    "cannotDisableLoginMethod": "لا يمكن تعطيل طريقة تسجيل الدخول",
+    "thirdPartyOnlyRequiresAdminBinding": "لا يمكن الإبقاء على تسجيل الدخول عبر الجهات الخارجية فقط إلا بعد ربط مدير بتسجيل دخول عبر جهة خارجية.",
+    "providerSaved": "تم حفظ مزود الهوية",
+    "providerSaveFailed": "فشل حفظ مزود الهوية",
+    "providerDeleted": "تم حذف مزود الهوية",
+    "providerDeleteFailed": "فشل حذف مزود الهوية",
+    "enableLoginFirst": "يرجى تفعيل التحكم في تسجيل الدخول أولًا",
+    "registrationRequiresLogin": "لا يمكن تفعيل التسجيل إلا بعد السماح لمزود الهوية هذا بتسجيل الدخول.",
+    "providerControlUpdated": "تم تحديث إعدادات التحكم في مزود الهوية",
+    "providerControlSaveFailed": "فشل حفظ إعدادات التحكم في مزود الهوية",
+    "providerOrderUpdated": "تم تحديث ترتيب مزودي الهوية",
+    "providerOrderSaveFailed": "فشل حفظ ترتيب مزودي الهوية",
+    "callbackCopied": "تم نسخ عنوان Callback"
+  }
+}

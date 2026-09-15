@@ -1,0 +1,40 @@
+{
+  "untitled": "محادثة جديدة",
+
+  "labelsDialog": {
+    "labels": "علامات المحادثة",
+    "labelsDescription": "يمكنك إضافة ما يصل إلى {count} علامات لتمييز المحادثة الحالية والبحث عنها.",
+    "labelsEmpty": "لا توجد علامات",
+    "labelPlaceholder": "إضافة علامة",
+    "addLabel": "إضافة علامة",
+    "removeLabel": "إزالة العلامة {label}",
+    "labelsSaveFailed": "تعذر حفظ علامات المحادثة"
+  },
+
+  "shareDialog": {
+    "title": "مشاركة هذه المحادثة",
+    "statusShared": "تمت المشاركة",
+    "statusNotShared": "غير مشتركة",
+    "publicLink": "الرابط العام",
+    "emptyLink": "لم يتم إنشاء رابط عام",
+    "copyLink": "نسخ رابط المشاركة",
+    "openLink": "فتح رابط المشاركة",
+    "loadFailed": "تعذر تحميل حالة المشاركة",
+    "noMessages": "لا توجد رسائل قابلة للمشاركة حاليًا",
+    "signInRequired": "يرجى تسجيل الدخول أولًا",
+    "closed": "تم إيقاف المشاركة",
+    "regenerated": "تم إنشاء رابط المشاركة من جديد",
+    "created": "تم إنشاء رابط المشاركة",
+    "operationFailed": "فشلت العملية",
+    "linkCopied": "تم نسخ الرابط",
+    "copyFailed": "فشل النسخ",
+    "closing": "جارٍ الإغلاق",
+    "closeShare": "إلغاء المشاركة",
+    "regenerating": "جارٍ إعادة الإنشاء",
+    "regenerate": "إعادة الإنشاء",
+    "copyAndClose": "نسخ وإغلاق",
+    "creating": "جارٍ الإنشاء",
+    "createLink": "إنشاء رابط",
+    "snapshotMessages": "{title} - {count} رسالة في اللقطة"
+  }
+}

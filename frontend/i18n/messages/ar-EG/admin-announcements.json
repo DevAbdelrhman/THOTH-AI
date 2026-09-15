@@ -1,0 +1,72 @@
+{
+  "title": "الإعلانات",
+  "description": "إدارة إعلانات الموقع وتعديلات النماذج وإشعارات التشغيل التي تظهر بعد تسجيل الدخول.",
+  "create": "إنشاء",
+  "edit": "تعديل",
+  "delete": "حذف",
+  "enable": "تفعيل",
+  "disable": "تعطيل",
+  "deleting": "جارٍ الحذف",
+  "searchPlaceholder": "البحث في العنوان أو المحتوى",
+  "statusFilter": "الحالة",
+  "allStatuses": "الكل",
+  "typeFilter": "النوع",
+  "allTypes": "الكل",
+  "pinnedFilter": "التثبيت",
+  "allPinned": "الكل",
+  "createTitle": "إنشاء إعلان",
+  "editTitle": "تعديل الإعلان",
+  "dialogDescription": "اكتب محتوى الإعلان باستخدام Markdown، وبعد التحديث سيظهر للمستخدمين وفقًا للإصدار الجديد.",
+  "deleteTitle": "حذف الإعلان",
+  "deleteDescription": "بعد الحذف لن يظهر الإعلان مرة أخرى، ولن يؤثر ذلك على بيانات المستخدمين الذين سجلوا الدخول.",
+  "empty": "لا توجد إعلانات",
+  "previewEmpty": "معاينة",
+  "status": {
+    "active": "مفعّل",
+    "inactive": "معطّل"
+  },
+  "pinned": {
+    "yes": "مثبّت",
+    "no": "غير مثبّت"
+  },
+  "types": {
+    "critical": "عاجل",
+    "warning": "تحذير",
+    "info": "معلومات",
+    "normal": "عادي",
+    "general": "عام"
+  },
+  "columns": {
+    "title": "الإعلان",
+    "type": "النوع",
+    "pinned": "التثبيت",
+    "status": "الحالة",
+    "priority": "الأولوية",
+    "window": "وقت العرض"
+  },
+  "fields": {
+    "title": "العنوان",
+    "priority": "الأولوية",
+    "type": "النوع",
+    "pinned": "التثبيت",
+    "status": "الحالة",
+    "timeRange": "وقت العرض",
+    "alwaysActive": "ساري المفعول دائمًا",
+    "startsAt": "وقت البدء",
+    "expiresAt": "وقت انتهاء الصلاحية",
+    "contentMarkdown": "المحتوى",
+    "preview": "معاينة"
+  },
+  "toast": {
+    "loadFailed": "فشل تحميل الإعلانات",
+    "invalid": "يرجى إدخال العنوان والمحتوى.",
+    "created": "تم إنشاء الإعلان",
+    "createFailed": "فشل إنشاء الإعلان",
+    "updated": "تم تحديث الإعلان",
+    "updateFailed": "فشل تحديث الإعلان",
+    "priorityInvalid": "يجب أن تكون الأولوية رقمًا",
+    "statusFailed": "فشل تحديث الحالة",
+    "deleted": "تم حذف الإعلان",
+    "deleteFailed": "فشل حذف الإعلان"
+  }
+}

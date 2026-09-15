@@ -1,0 +1,399 @@
+{
+  "admin": {
+    "defaultPermissionGroupDeleteNotAllowed": "لا يمكن حذف مجموعة الأذونات الافتراضية.",
+    "permissionGroupNotFound": "مجموعة الأذونات غير موجودة.",
+    "invalidPermissionGroupName": "لا يمكن أن يكون اسم مجموعة الأذونات فارغًا.",
+    "invalidPermissionGroupRateMultiplier": "مضاعف الفوترة غير صالح، ويجب أن يكون بين 1 و10000.",
+    "invalidPermissionGroupModels": "إعداد نماذج مجموعة الأذونات غير صالح.",
+    "invalidPermissionGroupUsers": "إعداد أعضاء مجموعة الأذونات غير صالح.",
+    "defaultPermissionGroupUsersImplicit": "تتم إدارة أعضاء مجموعة الأذونات الافتراضية تلقائيًا بواسطة النظام.",
+    "permissionGroupReferencedByPlan": "مجموعة الأذونات هذه مرتبطة بخطة فوترة، يرجى إلغاء الارتباط أولًا قبل حذفها."
+  },
+
+  "auth": {
+    "adminRequired": "تحتاج إلى صلاحيات المسؤول.",
+    "authorizationCodeRequired": "رمز التفويض مفقود.",
+    "emailAliasNotAllowed": "لا يُسمح باستخدام اسم مستعار للبريد الإلكتروني.",
+    "emailAlreadyExists": "البريد الإلكتروني مستخدم بالفعل.",
+    "emailBootstrapNotAllowed": "لا يُسمح للحساب الحالي بتهيئة البريد الإلكتروني.",
+    "emailDomainNotAllowed": "نطاق البريد الإلكتروني هذا غير مسموح به.",
+    "emailNotVerified": "لم يتم التحقق من البريد الإلكتروني بعد.",
+    "emailRegistrationDisabled": "تم تعطيل التسجيل عبر البريد الإلكتروني.",
+    "emailUnchanged": "لا يمكن أن يكون البريد الإلكتروني الجديد مطابقًا للبريد الإلكتروني الحالي.",
+    "emailVerificationDisabled": "تم تعطيل التحقق عبر البريد الإلكتروني.",
+    "forbidden": "ليس لديك صلاحية لتنفيذ هذا الإجراء.",
+    "invalidCredentials": "اسم المستخدم أو كلمة المرور غير صحيحة.",
+    "invalidCurrentPassword": "كلمة المرور الحالية غير صحيحة.",
+    "invalidEmail": "عنوان البريد الإلكتروني غير صالح.",
+    "invalidPassword": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل، ولا يمكن أن تكون أرقامًا فقط.",
+    "invalidPkce": "معلمات التحقق من تسجيل الدخول غير صالحة، يرجى تسجيل الدخول مرة أخرى.",
+    "invalidRedirectUri": "عنوان إعادة التوجيه غير صالح.",
+    "invalidRefreshToken": "انتهت صلاحية جلسة تسجيل الدخول، يرجى تسجيل الدخول مرة أخرى.",
+    "invalidToken": "بيانات اعتماد تسجيل الدخول غير صالحة، يرجى تسجيل الدخول مرة أخرى.",
+    "invalidTwoFactorCode": "رمز التحقق بخطوتين غير صالح.",
+    "lastLoginMethodRequired": "يرجى تعيين كلمة مرور أو ربط مصدر هوية آخر أولًا.",
+    "oauthIntentMismatch": "تدفق تسجيل الدخول عبر الخدمة الخارجية غير متطابق، يرجى المحاولة مرة أخرى.",
+    "oauthStateExpired": "انتهت صلاحية حالة تسجيل الدخول عبر الخدمة الخارجية، يرجى تسجيل الدخول مرة أخرى.",
+    "oauthStateInvalid": "حالة تسجيل الدخول عبر الخدمة الخارجية غير صالحة، يرجى تسجيل الدخول مرة أخرى.",
+    "passwordResetFailed": "فشلت إعادة تعيين كلمة المرور، يرجى التحقق من البريد الإلكتروني ورمز التحقق وكلمة المرور الجديدة.",
+    "passwordResetRequired": "يرجى إكمال إعادة تعيين كلمة المرور أولًا.",
+    "passwordReuseNotAllowed": "لا يمكن أن تكون كلمة المرور الجديدة مطابقة لكلمة المرور الأولية.",
+    "providerAccountNotRegistered": "هذا الحساب لدى الخدمة الخارجية غير مسجل.",
+    "providerAlreadyBound": "مصدر الهوية مرتبط بالفعل.",
+    "providerAuthUrlNotConfigured": "لم يتم إعداد عنوان تفويض مصدر الهوية.",
+    "providerBindEndpointRequired": "يرجى استخدام صفحة ربط الحساب لإكمال ربط مصدر الهوية.",
+    "providerCallbackMisconfigured": "إعداد عنوان إعادة الاتصال لمصدر الهوية غير صحيح.",
+    "providerClientIdRequired": "لا يمكن أن يكون Client ID لمصدر الهوية فارغًا.",
+    "providerClientSecretRequired": "لا يمكن أن يكون Client Secret لمصدر الهوية فارغًا.",
+    "providerDefaultRoleInvalid": "الدور الافتراضي لمصدر الهوية غير صالح.",
+    "providerSuperadminDefaultRoleProtected": "يمكن للمسؤول العام فقط تعيين الدور الافتراضي لمصدر الهوية إلى المسؤول العام.",
+    "providerEmailConflict": "البريد الإلكتروني هذا مرتبط بحساب آخر بالفعل.",
+    "providerIdRequired": "لا يمكن أن يكون معرّف مصدر الهوية فارغًا.",
+    "providerIdentityConflict": "هذه الهوية الخارجية مرتبطة بحساب آخر بالفعل.",
+    "providerInvalid": "فشل تسجيل الدخول عبر الخدمة الخارجية.",
+    "providerLoginDisabled": "تم تعطيل تسجيل الدخول عبر الخدمات الخارجية.",
+    "providerLogoUrlInvalid": "عنوان شعار مصدر الهوية غير صالح.",
+    "providerNameRequired": "لا يمكن أن يكون اسم مصدر الهوية فارغًا.",
+    "providerOauthUrlsRequired": "لا يمكن أن تكون عناوين تفويض OAuth2 وToken ومعلومات المستخدم فارغة.",
+    "providerOidcIssuerRequired": "لا يمكن أن يكون عنوان OIDC Issuer أو Discovery فارغًا.",
+    "providerOrderInvalid": "لا يمكن تكرار معرّف مصدر الهوية.",
+    "providerRegistrationDisabled": "تم تعطيل التسجيل عبر الخدمات الخارجية.",
+    "providerRegistrationRequiresLogin": "يجب تفعيل تسجيل الدخول عبر الخدمات الخارجية أولًا قبل تفعيل التسجيل من خلالها.",
+    "providerSlugRequired": "لا يمكن أن يكون معرّف مصدر الهوية المختصر فارغًا.",
+    "providerSubjectMissing": "الحساب الخارجي يفتقد معرّف هوية فريدًا.",
+    "providerTypeInvalid": "نوع مصدر الهوية غير صالح.",
+    "providerUpstreamFailed": "فشل الطلب إلى مصدر الهوية الخارجي.",
+    "sessionInvalid": "انتهت صلاحية جلسة تسجيل الدخول، يرجى تسجيل الدخول مرة أخرى.",
+    "superadminRequired": "تحتاج إلى صلاحيات المسؤول العام.",
+    "twoFactorAlreadyEnabled": "التحقق بخطوتين مفعّل بالفعل.",
+    "twoFactorChallengeExpired": "انتهت صلاحية التحقق الإضافي، يرجى تسجيل الدخول مرة أخرى باستخدام بيانات الحساب وكلمة المرور.",
+    "twoFactorExpired": "انتهت صلاحية التحقق بخطوتين، يرجى المحاولة مرة أخرى.",
+    "twoFactorNotStarted": "لم يبدأ التحقق بخطوتين بعد.",
+    "turnstileInvalid": "فشل التحقق من أنك لست روبوتًا، يرجى المحاولة مرة أخرى.",
+    "turnstileNotConfigured": "لم يتم إعداد التحقق من أنك لست روبوتًا بالكامل بعد.",
+    "turnstileRequired": "يرجى إكمال التحقق من أنك لست روبوتًا أولًا.",
+    "unauthorized": "انتهت صلاحية جلسة تسجيل الدخول، يرجى تسجيل الدخول مرة أخرى.",
+    "usernameChangeRequired": "يرجى تغيير اسم المستخدم الأولي.",
+    "verificationCodeAttemptsExceeded": "تم تجاوز عدد محاولات إدخال رمز التحقق، يرجى طلب رمز جديد.",
+    "verificationCodeInvalid": "رمز التحقق غير صالح أو انتهت صلاحيته.",
+    "verificationCodeRecent": "تم إرسال رمز التحقق للتو، يرجى الانتظار والمحاولة مرة أخرى لاحقًا."
+  },
+
+  "billing": {
+    "insufficientBalance": "الرصيد غير كافٍ.",
+    "insufficientFunds": "الرصيد غير كافٍ.",
+    "concurrencyLimitExceeded": "يمكن تشغيل 5 طلبات مدفوعة كحد أقصى في الوقت نفسه.",
+    "reservationConflict": "تم إرسال هذا الطلب بالفعل، يرجى عدم إرساله مرة أخرى.",
+    "invalidPlan": "خطة الفوترة غير صالحة.",
+    "planNotFound": "خطة الفوترة غير موجودة.",
+    "invalidPermissionGroup": "مجموعة الأذونات غير صالحة.",
+    "invalidDailyUsageDateRange": "نطاق تواريخ الاستخدام غير صالح.",
+    "invalidDailyUsageDays": "عدد أيام الاستخدام غير صالح.",
+    "invalidModelPricing": "تسعير النموذج غير صالح.",
+    "subscriptionEntitlementActive": "لا يزال لديك اشتراك مدفوع ساري، ولا يمكن التبديل إلى الخطة المجانية.",
+    "invalidRedemptionCode": "رمز الاسترداد غير صالح.",
+    "redemptionCodeConflict": "رمز الاسترداد موجود بالفعل.",
+    "redemptionCodeUnavailable": "رمز الاسترداد غير متاح أو انتهت صلاحيته.",
+    "redemptionCodePlaintextUnavailable": "رمز الاسترداد هذا لا يحتوي على محتوى مشفر قابل للنسخ، لذلك لا يمكن نسخ الرمز كاملًا.",
+    "redemptionCodeExhausted": "تم استنفاد عدد مرات استخدام رمز الاسترداد.",
+    "redemptionSecretUnavailable": "خدمة رموز الاسترداد غير متاحة حاليًا.",
+    "redemptionUserLimitExceeded": "وصل الحساب الحالي إلى الحد الأقصى لاستخدام رمز الاسترداد هذا.",
+    "redemptionValidation": {
+      "codeFormat": "يمكن أن يحتوي رمز الاسترداد فقط على 3-64 حرفًا كبيرًا أو رقمًا أو شرطة أو شرطة سفلية.",
+      "quantity": "يجب أن تكون الكمية عددًا صحيحًا بين 1 و100.",
+      "manualQuantity": "يمكن إنشاء رمز استرداد يدوي واحد فقط.",
+      "mode": "وضع الفوترة غير صالح.",
+      "credit": "يجب أن يكون مبلغ الرصيد أكبر من 0.",
+      "plan": "يرجى اختيار خطة مفعّلة وليست مجانية.",
+      "duration": "يجب أن يكون عدد أيام الصلاحية أكبر من 0.",
+      "expiresAt": "يجب أن يكون وقت الانتهاء لاحقًا للوقت الحالي.",
+      "maxRedemptions": "يجب أن يكون العدد الإجمالي عددًا صحيحًا موجبًا، أو اتركه فارغًا للدلالة على عدم وجود حد.",
+      "perUserLimit": "يجب أن يكون حد الاستخدام لكل مستخدم عددًا صحيحًا موجبًا.",
+      "limitRelationship": "لا يمكن أن يكون حد الاستخدام لكل مستخدم أكبر من العدد الإجمالي.",
+      "status": "حالة رمز الاسترداد غير صالحة."
+    },
+    "invalidSubscriptionExpiry": "وقت انتهاء الاشتراك غير صالح.",
+    "invalidSubscriptionTier": "مستوى الاشتراك غير صالح.",
+    "paymentRequired": "يجب إتمام الدفع أولًا.",
+    "periodCreditExceeded": "تم استنفاد رصيد الفترة.",
+    "pricingRequired": "يجب إعداد تسعير النموذج أولًا.",
+    "subscriptionExpiryRequired": "يجب تحديد وقت انتهاء الاشتراك."
+  },
+
+  "config": {
+    "invalidJson": "إعدادات JSON غير صالحة."
+  },
+
+  "conversation": {
+    "invalidId": "معرّف المحادثة غير صالح.",
+    "invalidTitle": "عنوان المحادثة غير صالح.",
+    "messageForkHistoryIncomplete": "مستوى المحادثة عميق جدًا أو أن سجل الرسائل غير مكتمل، ولا يمكن إنشاء محادثة جديدة من هذا الموضع.",
+    "messageForkStateInvalid": "يرجى الانتظار حتى يكتمل إنشاء الرسالة الحالية قبل إنشاء محادثة جديدة منها.",
+    "messageForkTargetInvalid": "يمكن إنشاء محادثة جديدة فقط من رد المساعد.",
+    "noTitleableContent": "لا توجد محتويات في المحادثة الحالية يمكن استخدامها لإنشاء عنوان.",
+    "notFound": "المحادثة غير موجودة."
+  },
+
+  "conversationRun": {
+    "canceled": "تم إلغاء الإنشاء.",
+    "streamInterrupted": "انقطع اتصال الإنشاء، يرجى إعادة محاولة هذه الرسالة.",
+    "streamNotFound": "تدفق الإنشاء غير موجود."
+  },
+
+  "conversationShare": {
+    "invalid": "مشاركة المحادثة غير صالحة.",
+    "invalidId": "معرّف المشاركة غير صالح.",
+    "notFound": "المشاركة غير موجودة.",
+    "schemaOutdated": "بنية بيانات المشاركة قديمة، يرجى إعادة إنشاء قاعدة البيانات."
+  },
+
+  "contextArtifact": {
+    "invalidId": "معرّف عنصر السياق غير صالح.",
+    "notFound": "عنصر السياق غير موجود."
+  },
+
+  "cors": {
+    "originForbidden": "المصدر الحالي غير مسموح له بالوصول."
+  },
+
+  "embedding": {
+    "serviceNotConfigured": "يرجى تفعيل خدمة Embedding وإعدادها أولًا.",
+    "serviceUnavailable": "خدمة المتجهات غير متاحة."
+  },
+
+  "file": {
+    "embeddingUnavailable": "لا يدعم هذا الملف معالجة المتجهات حاليًا.",
+    "extractNotReady": "لم تكتمل معالجة الملف بعد.",
+    "invalidId": "معرّف الملف غير صالح.",
+    "invalidName": "اسم الملف غير صالح.",
+    "invalidReference": "مرجع الملف غير صالح.",
+    "invalidStream": "تدفق الملف غير صالح.",
+    "inUse": "الملف قيد الاستخدام حاليًا ولا يمكن حذفه.",
+    "notFound": "الملف غير موجود.",
+    "notReady": "الملف لم يجهز بعد.",
+    "required": "يرجى اختيار ملف.",
+    "tooLarge": "الملف كبير جدًا.",
+    "tooLargeForContext": "الملف كبير جدًا ولا يمكن إضافته إلى السياق الكامل.",
+    "typeBlocked": "نوع الملف هذا غير مسموح برفعه."
+  },
+
+  "identityProvider": {
+    "deleteConflict": "سيؤدي حذف مصدر الهوية هذا إلى فقدان بعض المستخدمين لطريقة تسجيل الدخول الوحيدة الخاصة بهم."
+  },
+
+  "internal": {
+    "error": "حدث خطأ داخلي في الخادم، يرجى المحاولة مرة أخرى لاحقًا."
+  },
+
+  "knowledgeBase": {
+    "conflict": "توجد قاعدة معرفة تحمل الاسم نفسه ضمن النطاق الحالي.",
+    "fileCleanupUnavailable": "خدمة تنظيف ملفات المنصة غير متاحة حاليًا، يرجى المحاولة مرة أخرى لاحقًا.",
+    "internal": "فشلت عملية قاعدة المعرفة، يرجى المحاولة مرة أخرى لاحقًا.",
+    "invalid": "إعداد قاعدة المعرفة غير صالح.",
+    "invalidReference": "قاعدة المعرفة المحددة غير موجودة أو معطلة أو ليس لديك صلاحية للوصول إليها.",
+    "notFound": "قاعدة المعرفة غير موجودة.",
+    "notReady": "لا تحتوي قاعدة المعرفة المحددة على ملفات قابلة للبحث حاليًا، يرجى الانتظار حتى يكتمل الفهرس.",
+    "ownerFileReference": "لا تزال هناك ملفات للحساب مرتبطة بقاعدة المعرفة المدمجة، يرجى إزالتها أو إعادة رفعها واستلام إدارتها بواسطة مسؤول آخر.",
+    "platformFileInUse": "لا تزال ملفات المنصة هذه مستخدمة بواسطة موارد أخرى، يرجى إزالة المراجع إليها قبل حذفها.",
+    "unavailable": "البحث في قاعدة المعرفة غير متاح حاليًا، يرجى المحاولة مرة أخرى لاحقًا. إذا استمرت المشكلة، يرجى التواصل مع المسؤول للتحقق من خدمة المتجهات."
+  },
+
+  "toolRun": {
+    "finalAnswerMissing": "وصل استدعاء الأدوات إلى الحد الأقصى للتشغيل، لكن النموذج لم يُنشئ إجابة نهائية. يرجى المحاولة مرة أخرى أو تقليل عدد الأدوات المفعّلة في هذه العملية."
+  },
+
+  "llm": {
+    "apiKeysRequired": "لا يمكن أن تكون API Keys فارغة.",
+    "circuitBreakerDisabled": "قاطع حماية النموذج غير مفعّل، يرجى تفعيله أولًا قبل تنفيذ هذا الإجراء.",
+    "emptyResponse": "أعاد النموذج استجابة فارغة.",
+    "invalidAdapter": "بروتوكول الواجهة غير مدعوم، يرجى اختيار بروتوكول آخر.",
+    "invalidApiKeysConfig": "إعداد API Keys غير صالح.",
+    "invalidCompatible": "وضع التوافق غير صالح.",
+    "invalidHeadersConfig": "إعداد ترويسات الطلب غير صالح.",
+    "invalidKinds": "نوع النموذج غير صالح.",
+    "invalidModelCapabilities": "يجب أن تتراوح نافذة سياق النموذج بين 4096 و16000000، ويجب أن يكون الحد الأقصى لرموز الإخراج أقل من نافذة السياق.",
+    "invalidPlatformModelName": "اسم نموذج المنصة غير صالح.",
+    "invalidRouteProtocolCombination": "تركيبة البروتوكولات الحالية غير متاحة. يمكن للربط الواحد اختيار بروتوكول واحد فقط، أو اختيار بروتوكولي إنشاء الصور وتحرير الصور من نفس المورّد.",
+    "systemPromptTooLong": "لا يمكن أن يتجاوز System Prompt عدد 20000 حرف.",
+    "invalidProtocolDefaultsConfig": "إعدادات البروتوكول الافتراضية غير صالحة.",
+    "modelAccessDenied": "مجموعة الأذونات الحالية لا تملك صلاحية استخدام هذا النموذج.",
+    "modelRouteNotConfigured": "لم يتم إعداد مسار النموذج.",
+    "modelIconInvalid": "مرجع أيقونة النموذج غير صالح، يرجى استخدام اسم أيقونة مدمجة أو رفع أيقونة أو استخدام عنوان صورة http(s).",
+    "modelIconFileInvalid": "ملف الأيقونة غير صالح، ويتم دعم PNG وJPEG وWebP فقط.",
+    "modelIconFileTooLarge": "لا يمكن أن يتجاوز ملف الأيقونة 1 MiB.",
+    "modelIconAssetNotFound": "أصل الأيقونة غير موجود، يرجى رفعه مرة أخرى.",
+    "modelIconAssetInUse": "لا تزال هذه الأيقونة مستخدمة، يرجى إلغاء ارتباطها أولًا.",
+    "modelVendorBuiltin": "لا يمكن حذف المورّد المدمج.",
+    "modelVendorInUse": "لا يزال المورّد مرتبطًا بنماذج، يرجى نقل هذه النماذج أولًا.",
+    "noActiveApiKey": "لا يوجد API Key متاح.",
+    "platformModelNameExists": "اسم نموذج المنصة مستخدم بالفعل.",
+    "platformModelNameRequired": "لا يمكن أن يكون اسم نموذج المنصة فارغًا.",
+    "protocolRequired": "لا يمكن أن يكون البروتوكول فارغًا.",
+    "remoteModelsUnavailable": "قائمة النماذج البعيدة غير متاحة حاليًا.",
+    "routeConflict": "يوجد بالفعل ربط لنموذج المنصة والبروتوكول نفسيهما مع نموذج upstream هذا، يرجى حذف الربط المكرر قبل الحفظ.",
+    "routesUnavailable": "جميع مسارات النماذج غير متاحة."
+  },
+
+  "mcp": {
+    "clientUnavailable": "عميل MCP غير متاح.",
+    "invalidServerBaseUrl": "عنوان خادم MCP غير صالح.",
+    "invalidServerHeaders": "إعداد ترويسات طلب خادم MCP غير صالح.",
+    "invalidServerName": "اسم خادم MCP غير صالح.",
+    "invalidServerStatus": "حالة خادم MCP غير صالحة.",
+    "invalidToolDescription": "وصف أداة MCP غير صالح.",
+    "invalidToolName": "اسم أداة MCP غير صالح.",
+    "invalidToolSelection": "إعداد اختيار أدوات MCP غير صالح.",
+    "invalidToolStatus": "حالة أداة MCP غير صالحة.",
+    "server": {
+      "invalidId": "معرّف خادم MCP غير صالح."
+    },
+    "tool": {
+      "invalidId": "معرّف أداة MCP غير صالح."
+    }
+  },
+
+  "memory": {
+    "keyRequired": "لا يمكن أن يكون مفتاح الذاكرة فارغًا."
+  },
+
+  "media": {
+    "imagePromptRequired": "يرجى إدخال وصف للصورة.",
+    "imageGenerationRejectsInputs": "إنشاء الصور لا يدعم إرفاق صور إدخال، يرجى إزالة المرفق أو اختيار تحرير الصور.",
+    "imageEditInputRequired": "يتطلب تحرير الصور رفع صورة إدخال واحدة على الأقل.",
+    "imageEditTooManyInputs": "عدد صور الإدخال المستخدمة لتحرير الصور كبير جدًا.",
+    "imageEditInputInvalid": "يدعم تحرير الصور ملفات الصور الصالحة فقط.",
+    "artifactUnavailable": "نتيجة الإنشاء غير متاحة مؤقتًا، يرجى المحاولة مرة أخرى لاحقًا. إذا استمرت المشكلة، يرجى التواصل مع المسؤول.",
+    "imageStreamUnsupported": "ملاحظة: قد لا يدعم upstream الحالي الاستجابات المتدفقة. يرجى من المسؤول تعطيل \"استدعاء الصور المتدفق\" في قدرات النموذج (الإعداد image.stream=false) ثم المحاولة مرة أخرى.",
+    "routeProtocolMismatch": "بروتوكول مسار النموذج الحالي غير متوافق مع مهمة الصور، يرجى التحقق من ربط النموذج.",
+    "invalidTask": "معلمات مهمة الصورة غير صالحة."
+  },
+
+  "message": {
+    "feedbackTargetInvalid": "هدف تقييم الرسالة غير صالح.",
+    "editStateInvalid": "حالة الرسالة الحالية لا تسمح بالتعديل.",
+    "editTargetInvalid": "يمكن تعديل ردود الذكاء الاصطناعي فقط.",
+    "invalidBranch": "فرع الرسالة غير صالح.",
+    "invalidContent": "محتوى الرسالة غير صالح.",
+    "invalidFeedback": "تقييم الرسالة غير صالح.",
+    "invalidId": "معرّف الرسالة غير صالح.",
+    "notFound": "الرسالة غير موجودة.",
+    "tooManyFiles": "تحتوي الرسالة الواحدة على عدد كبير جدًا من الملفات."
+  },
+
+  "payment": {
+    "checkoutFailed": "فشل إنشاء طلب الدفع.",
+    "epayGatewayInvalid": "عنوان بوابة التحويل إلى صفحة الدفع في ePay غير صالح.",
+    "epayTypeUnsupported": "نوع ePay هذا غير مدعوم.",
+    "invalidEvent": "حدث الدفع غير صالح.",
+    "invalidSignature": "توقيع الدفع غير صالح.",
+    "invalidWebhookBody": "محتوى استدعاء الدفع غير صالح.",
+    "notificationMismatch": "لا يتطابق إشعار الدفع مع الطلب.",
+    "orderNoRequired": "لا يمكن أن يكون رقم الطلب فارغًا.",
+    "providerUnavailable": "خدمة الدفع غير متاحة.",
+    "returnUrlCrossOrigin": "يجب أن يستخدم عنوان العودة من الدفع نطاق الموقع العام المُعد مسبقًا.",
+    "returnUrlInvalid": "عنوان العودة من الدفع غير صالح.",
+    "webhookBodyTooLarge": "محتوى استدعاء الدفع كبير جدًا.",
+    "webhookNotConfigured": "لم يتم إعداد استدعاء الدفع بعد."
+  },
+
+  "quota": {
+    "exceeded": "تم استنفاد الحصة."
+  },
+
+  "rateLimit": {
+    "authenticationExceeded": "تم تجاوز عدد محاولات المصادقة، يرجى المحاولة مرة أخرى لاحقًا.",
+    "exceeded": "الطلبات متكررة جدًا، يرجى المحاولة مرة أخرى لاحقًا.",
+    "refreshExceeded": "تم تجاوز عدد مرات تحديث جلسة تسجيل الدخول، يرجى المحاولة مرة أخرى لاحقًا."
+  },
+
+  "request": {
+    "invalid": "الطلب غير صالح، يرجى التحقق والمحاولة مرة أخرى.",
+    "invalid_": "معلمات الطلب غير صالحة.",
+    "invalidBody": "معلمات الطلب غير صالحة، يرجى التحقق والمحاولة مرة أخرى.",
+    "invalidId": "المعرّف غير صالح.",
+    "invalidQuery": "معلمات الاستعلام غير صالحة.",
+    "required": "توجد معلمات مطلوبة مفقودة."
+  },
+
+  "resource": {
+    "conflict": "يوجد تعارض في المورد، يرجى تحديث الصفحة والمحاولة مرة أخرى.",
+    "notFound": "المورد غير موجود."
+  },
+
+  "route": {
+    "notFound": "المسار غير موجود."
+  },
+
+  "runtime": {
+    "doclingUnavailable": "بيئة تشغيل Docling غير متاحة.",
+    "mineruUnavailable": "بيئة تشغيل MinerU غير متاحة.",
+    "rapidocrUnavailable": "بيئة تشغيل RapidOCR غير متاحة.",
+    "tesseractUnavailable": "بيئة تشغيل Tesseract غير متاحة.",
+    "tikaUnavailable": "بيئة تشغيل Tika غير متاحة."
+  },
+
+  "service": {
+    "unavailable": "الخدمة غير متاحة حاليًا، يرجى المحاولة مرة أخرى لاحقًا."
+  },
+
+  "settings": {
+    "billingPaymentInvalid": "إعدادات دفع الفوترة غير صالحة.",
+    "embeddingInvalid": "إعدادات المتجهات غير صالحة.",
+    "extractInvalid": "إعدادات معالجة الملفات غير صالحة.",
+    "invalidKey": "مفتاح الإعداد غير صالح.",
+    "invalidNamespace": "مساحة أسماء الإعدادات غير صالحة.",
+    "invalidValue": "قيمة الإعداد غير صالحة.",
+    "modelOptionPolicyInvalid": "إعداد سياسة معلمات النموذج غير صالح.",
+    "notFound": "الإعداد غير موجود.",
+    "serviceUnavailable": "خدمة الإعدادات غير متاحة.",
+    "smtpInvalid": "إعدادات SMTP غير صالحة."
+  },
+
+  "upstream": {
+    "unavailable": "خدمة upstream غير متاحة."
+  },
+
+  "upstreamEmptyResponse": "أعاد upstream استجابة فارغة، يرجى المحاولة مرة أخرى لاحقًا أو التواصل مع المسؤول للتحقق من مسار النموذج.",
+
+  "upstreamRequestFailed": "فشل طلب upstream، يرجى المحاولة مرة أخرى لاحقًا أو التواصل مع المسؤول للتحقق من مسار النموذج.",
+
+  "user": {
+    "accountDeleteVerificationRequired": "يجب التحقق من هويتك قبل حذف الحساب.",
+    "emptyPatch": "يرجى تعديل حقل مستخدم واحد على الأقل.",
+    "invalidAvatarUrl": "عنوان الصورة الشخصية غير صالح.",
+    "invalidEmail": "البريد الإلكتروني للمستخدم غير صالح.",
+    "invalidLocale": "المنطقة اللغوية غير صالحة.",
+    "invalidLocation": "معلومات الموقع غير صالحة.",
+    "invalidPhone": "رقم الهاتف غير صالح.",
+    "invalidRole": "دور المستخدم غير صالح.",
+    "invalidStatus": "حالة المستخدم غير صالحة.",
+    "invalidTimeZone": "المنطقة الزمنية غير صالحة.",
+    "invalidUsername": "يجب أن يتكون اسم المستخدم من 3-16 حرفًا.",
+    "invalidDisplayName": "يجب أن يتكون اسم العرض من 3-16 حرفًا.",
+    "lastSuperadminRoleProtected": "لا يمكن تغيير دور آخر مسؤول عام.",
+    "selfDeleteNotAllowed": "لا يمكنك حذف الحساب الحالي.",
+    "selfRoleChangeNotAllowed": "لا يمكنك تغيير دورك.",
+    "selfStatusChangeNotAllowed": "لا يمكنك تغيير حالتك.",
+    "superadminDeleteProtected": "لا يمكن حذف حساب المسؤول العام.",
+    "superadminPasswordResetProtected": "لا يمكن إعادة تعيين كلمة مرور المسؤول العام.",
+    "superadminManagementProtected": "لا يمكن للمسؤول إدارة حسابات المسؤول العام.",
+    "superadminStatusProtected": "لا يمكن تغيير حالة المسؤول العام.",
+    "superadminTwoFactorResetProtected": "لا يمكن إعادة تعيين التحقق بخطوتين للمسؤول العام.",
+    "usernameAlreadyExists": "اسم المستخدم مستخدم بالفعل.",
+    "usernameChangeUsed": "تم استنفاد عدد مرات تغيير اسم المستخدم.",
+    "usernameTaken": "اسم المستخدم مستخدم بالفعل."
+  },
+
+  "userSettings": {
+    "invalidValue": "قيمة إعداد المستخدم غير صالحة.",
+    "unknownKey": "إعداد المستخدم غير معروف."
+  },
+
+  "content_moderation": {
+    "blocked": "تم حظر المحتوى بواسطة فحص الأمان.",
+    "invalid_config": "إعدادات مراجعة المحتوى غير صالحة.",
+    "config_required": "عند تفعيل مراجعة المحتوى، يجب إعداد الخدمة بالكامل واختيار فئة مراجعة واحدة على الأقل.",
+    "probe_failed": "فشل اختبار اتصال مراجعة المحتوى.",
+    "event_not_found": "لم يتم العثور على حدث مراجعة المحتوى."
+  }
+}

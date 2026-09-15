@@ -1,0 +1,438 @@
+{
+  "title": "السجلات",
+  "centerTitle": "مركز السجلات",
+  "audit": "سجل العمليات",
+  "usage": "استدعاءات النماذج",
+  "system": "أحداث النظام",
+  "tabs": {
+    "audit": "سجل العمليات",
+    "usage": "استدعاءات النماذج",
+    "auth": "أمان المصادقة",
+    "orders": "سجلات الطلبات",
+    "conversation": "أحداث المحادثات",
+    "moderation": "أحداث المراجعة",
+    "system": "أحداث النظام"
+  },
+  "cleanup": {
+    "trigger": "تنظيف السجلات",
+    "title": "تنظيف السجلات القديمة",
+    "description": "سيتم حذف البيانات الموجودة قبل الساعة 00:00 من التاريخ المحدد حذفًا نهائيًا، ولا يمكن التراجع عن هذا الإجراء.",
+    "typeLabel": "نوع السجل",
+    "dateLabel": "تاريخ الحد الأقصى",
+    "datePlaceholder": "اختر التاريخ",
+    "impactTitle": "نطاق التأثير",
+    "highRisk": "مخاطر عالية",
+    "boundary": "سيتم حذف البيانات قبل {date} الساعة 00:00، ولن تشمل بيانات ذلك اليوم.",
+    "confirm": "تنظيف",
+    "deleting": "جارٍ التنظيف",
+    "types": {
+      "audit": "سجل العمليات",
+      "auth": "أمان المصادقة",
+      "usage": "استدعاءات النماذج",
+      "orders": "سجلات الطلبات",
+      "conversation": "أحداث المحادثات",
+      "system": "أحداث النظام"
+    },
+    "impacts": {
+      "audit": "سيتم حذف سجلات تتبع عمليات المديرين والمستخدمين فقط، ولن يتم حذف المستخدمين أو الجلسات أو أي بيانات أخرى خاصة بالنظام.",
+      "auth": "سيتم حذف سجل أحداث تسجيل الدخول والتحقق بخطوتين وكلمات المرور وغيرها من أحداث الأمان، ولن يتم تسجيل خروج الجلسات الحالية أو تغيير بيانات تسجيل الدخول.",
+      "usage": "سيتم حذف سجل الاستخدام والتكاليف، مما يؤثر على إحصاءات الاستخدام اليومية والشهرية السابقة وحسابات الحصة في الفترة الحالية وتتبع الفوترة، وقد يؤدي إلى انخفاض الاستخدام المحتسب للفترات التي تم تنظيفها.",
+      "orders": "سيتم حذف طلبات الدفع وبيانات الربط الخاصة بإشعارات الدفع، ولن يتم إلغاء الأرصدة أو الاشتراكات التي تم منحها مسبقًا، لكن قد تفشل إشعارات الدفع القديمة، وستفقد بيانات تتبع الدفع ومعلومات منع التكرار.",
+      "conversation": "سيتم حذف سجلات معالجة الرسائل واستدعاءات الأدوات وأحداث التشغيل؛ بينما ستظل المحادثات ونصوص الرسائل محفوظة، لكن قد لا تعود تفاصيل المعالجة السابقة والأدوات معروضة.",
+      "system": "سيتم حذف سجلات تشخيص النظام واستكشاف الأخطاء وإصلاحها، ولن يؤثر ذلك على إعدادات النظام أو حالة التشغيل الحالية."
+    },
+    "toast": {
+      "sessionExpired": "انتهت صلاحية تسجيل الدخول",
+      "signInAgain": "يرجى تسجيل الدخول مرة أخرى قبل المتابعة.",
+      "success": "اكتمل تنظيف السجلات، وتم حذف {count} سجل",
+      "failed": "فشل تنظيف السجلات"
+    }
+  },
+  "toast": {
+    "sessionExpired": "انتهت صلاحية تسجيل الدخول",
+    "signInAgain": "يرجى تسجيل الدخول مرة أخرى قبل المتابعة.",
+    "auditLoadFailed": "فشل تحميل سجل العمليات",
+    "authLoadFailed": "فشل تحميل سجلات المصادقة",
+    "systemLoadFailed": "فشل تحميل أحداث النظام",
+    "usageLoadFailed": "فشل تحميل سجلات الاستدعاءات",
+    "ordersLoadFailed": "فشل تحميل سجلات الطلبات",
+    "conversationEventsLoadFailed": "فشل تحميل أحداث المحادثات",
+    "conversationEventDetailLoadFailed": "فشل تحميل تفاصيل حدث المحادثة",
+    "modelFilterLoadFailed": "فشل تحميل تصفية النماذج"
+  },
+  "sort": {
+    "idDesc": "المعرف من الأحدث إلى الأقدم",
+    "idAsc": "المعرف من الأقدم إلى الأحدث",
+    "createdDesc": "وقت الإنشاء من الأحدث إلى الأقدم",
+    "createdAsc": "وقت الإنشاء من الأقدم إلى الأحدث",
+    "occurredDesc": "وقت الحدوث من الأحدث إلى الأقدم",
+    "occurredAsc": "وقت الحدوث من الأقدم إلى الأحدث",
+    "callTimeDesc": "وقت الاستدعاء من الأحدث إلى الأقدم",
+    "callTimeAsc": "وقت الاستدعاء من الأقدم إلى الأحدث",
+    "costDesc": "التكلفة من الأعلى إلى الأقل",
+    "tokensDesc": "عدد Token من الأعلى إلى الأقل",
+    "latencyDesc": "زمن الاستجابة من الأعلى إلى الأقل",
+    "paidDesc": "وقت الدفع من الأحدث إلى الأقدم",
+    "amountDesc": "المبلغ من الأعلى إلى الأقل",
+    "sequenceAsc": "ترتيب الأحداث من الأقدم إلى الأحدث"
+  },
+  "filters": {
+    "allResources": "الكل",
+    "allActions": "الكل",
+    "allSources": "الكل",
+    "allEvents": "الكل",
+    "allResults": "الكل",
+    "allLevels": "الكل",
+    "timeRange": "النطاق الزمني",
+    "levels": {
+      "info": "معلومات",
+      "warn": "تحذير",
+      "error": "خطأ"
+    }
+  },
+  "columns": {
+    "actor": "منفذ العملية",
+    "action": "الإجراء",
+    "resource": "المورد",
+    "time": "الوقت",
+    "requestID": "معرف الطلب",
+    "user": "المستخدم",
+    "event": "الحدث",
+    "result": "النتيجة",
+    "reason": "السبب",
+    "level": "المستوى",
+    "source": "المصدر",
+    "message": "الرسالة",
+    "caller": "مستدعي العملية",
+    "model": "النموذج",
+    "usage": "الاستخدام",
+    "billing": "الفوترة",
+    "balanceAfter": "الرصيد بعد التسوية",
+    "latency": "زمن الاستجابة",
+    "orderNo": "رقم الطلب",
+    "type": "النوع",
+    "provider": "مزود الخدمة",
+    "status": "الحالة",
+    "upstream": "المصدر الوسيط",
+    "amount": "المبلغ",
+    "scope": "النطاق",
+    "tool": "الأداة",
+    "runID": "معرف التشغيل"
+  },
+  "audit": {
+    "searchPlaceholder": "البحث بمعرف المستخدم أو الإجراء أو المورد أو معرف الطلب أو IP أو التفاصيل",
+    "empty": "لا توجد سجلات عمليات حاليًا",
+    "resources": {
+      "user": "المستخدمون والحسابات",
+      "conversation": "المحادثة",
+      "conversation_project": "المشروع",
+      "message": "الرسالة",
+      "file": "الملف",
+      "memory": "الذاكرة",
+      "settings": "إعدادات النظام",
+      "logs": "السجلات"
+    },
+    "actions": {
+      "login": "تسجيل الدخول",
+      "stream_message": "إرسال رسالة",
+      "create_conversation": "إنشاء محادثة",
+      "fork_conversation": "إنشاء فرع للمحادثة",
+      "rename_conversation": "إعادة تسمية المحادثة",
+      "update_conversation_labels": "تحديث علامات المحادثة",
+      "export_conversation": "تصدير المحادثة",
+      "delete_conversation": "حذف المحادثة",
+      "set_conversation_star": "تمييز المحادثة",
+      "set_conversation_archive": "أرشفة المحادثة",
+      "set_conversation_project": "نقل المحادثة إلى مشروع",
+      "batch_set_conversation_project": "نقل المحادثات إلى مشروع دفعة واحدة",
+      "create_conversation_project": "إنشاء مشروع",
+      "update_conversation_project": "تحديث المشروع",
+      "delete_conversation_project": "حذف المشروع",
+      "reorder_conversation_projects": "إعادة ترتيب المشاريع",
+      "create_conversation_share": "إنشاء مشاركة",
+      "regenerate_conversation_share": "إعادة إنشاء المشاركة",
+      "revoke_conversation_share": "إلغاء المشاركة",
+      "revoke_conversation_shares": "إلغاء المشاركات دفعة واحدة",
+      "clone_shared_conversation": "نسخ المحادثة المشتركة",
+      "update_message": "تحديث الرسالة",
+      "set_message_feedback": "إضافة ملاحظات على الرسالة",
+      "upload_file": "رفع ملف",
+      "update_file": "تحديث الملف",
+      "delete_file": "حذف الملف",
+      "upsert_user_memory": "حفظ الذاكرة",
+      "delete_user_memory": "حذف الذاكرة",
+      "settings_update": "تحديث إعدادات النظام",
+      "admin_create_user": "إنشاء مستخدم بواسطة المدير",
+      "admin_patch_user": "تحديث مستخدم بواسطة المدير",
+      "admin_update_user_status": "تعديل حالة المستخدم بواسطة المدير",
+      "admin_revoke_user_sessions": "إلغاء جلسات المستخدم بواسطة المدير",
+      "admin_reset_user_password": "إعادة تعيين كلمة مرور المستخدم بواسطة المدير",
+      "admin_reset_user_2fa": "إعادة تعيين التحقق بخطوتين للمستخدم بواسطة المدير",
+      "admin_delete_user": "حذف المستخدم بواسطة المدير",
+      "admin_cleanup_logs": "تنظيف السجلات بواسطة المدير",
+      "admin_cleanup_conversation_runs": "تنظيف سجلات تشغيل المحادثات بواسطة المدير"
+    }
+  },
+  "auth": {
+    "searchPlaceholder": "البحث بمعرف المستخدم أو نوع الحدث",
+    "empty": "لا توجد سجلات مصادقة حاليًا"
+  },
+  "system": {
+    "searchPlaceholder": "البحث بالمصدر أو الحدث أو المورد أو معرف الطلب أو التفاصيل",
+    "empty": "لا توجد أحداث نظام حاليًا"
+  },
+  "usage": {
+    "searchPlaceholder": "البحث بمعرف المستخدم أو نموذج المنصة أو نموذج المصدر الوسيط أو اسم المصدر الوسيط أو رمز الربط أو البروتوكول",
+    "empty": "لا توجد سجلات استدعاءات حاليًا",
+    "filters": {
+      "billingMode": "وضع الفوترة",
+      "all": "الكل",
+      "allModels": "الكل",
+      "model": "النموذج المستدعى"
+    },
+    "billingModes": {
+      "token": "حسب الاستخدام",
+      "call": "حسب الاستدعاء",
+      "duration": "حسب الثانية",
+      "tiered": "متدرج"
+    },
+    "modelTooltip": {
+      "upstreamName": "اسم المصدر الوسيط",
+      "upstreamModel": "النموذج الفعلي",
+      "bindingCode": "رمز الربط",
+      "protocol": "البروتوكول"
+    },
+    "tokens": {
+      "inputShort": "إدخال",
+      "outputShort": "إخراج",
+      "cacheReadShort": "قراءة",
+      "cacheWriteShort": "كتابة",
+      "input": "الإدخال",
+      "output": "الإخراج",
+      "reasoning": "الاستدلال",
+      "outputTotal": "إجمالي الإخراج",
+      "imageCount": "{count} صورة",
+      "secondCount": "{count} ثانية"
+    },
+    "billing": {
+      "cacheWrite": "التخزين المؤقت (كتابة)",
+      "cacheWrite5m": "التخزين المؤقت (كتابة 5m)",
+      "cacheWrite1h": "التخزين المؤقت (كتابة 1h)",
+      "cacheWrite5m1h": "التخزين المؤقت (كتابة 5m/1h)",
+      "cacheWritePricingLabel": "التخزين المؤقت (كتابة 5m)",
+      "cacheWritePricingNote": "تتم قراءة تكلفة التخزين المؤقت في Claude وفق إعدادات الخلفية؛ وتُحسب كتابة التخزين المؤقت لمدة 5m بسعر 1.25x وفق إعدادات الخلفية، و1h بسعر 2x؛ ويطبق Fast Mode معامل 6x إضافيًا على ذلك.",
+      "claudeCacheWriteMixedNote": "تُحسب كتابة التخزين المؤقت في Claude بسعر إعدادات الخلفية مع معامل {multiplier}.",
+      "claudeCacheWriteNote": "تُحسب كتابة التخزين المؤقت في Claude لمدة {timeout} بسعر إعدادات الخلفية مع معامل {multiplier}.",
+      "claudeFastModeNote": "Claude Fast Mode: تُحسب تكاليف الإدخال والإخراج والتخزين المؤقت بمعامل {multiplier}.",
+      "openaiServiceTierNote": "OpenAI service_tier={tier}: تُحسب التكلفة بمعامل {multiplier}.",
+      "input": "الإدخال",
+      "output": "الإخراج",
+      "cacheRead": "التخزين المؤقت (قراءة)",
+      "rateNote": "ملاحظة المعامل",
+      "cacheNote": "ملاحظة التخزين المؤقت",
+      "total": "الإجمالي",
+      "freeModelNoBilling": "مجاني",
+      "perCall": "لكل استدعاء",
+      "perSecond": "لكل ثانية",
+      "callUnit": "استدعاء",
+      "secondUnit": "ثانية",
+      "tieredRangeBounded": "نطاق الإدخال الأصلي {from}~{upTo}",
+      "tieredRangeOpen": "نطاق الإدخال الأصلي {from}+",
+      "table": {
+        "item": "عنصر الفوترة",
+        "usage": "الاستخدام",
+        "unitPrice": "سعر الوحدة",
+        "amount": "المبلغ"
+      }
+    }
+  },
+  "orders": {
+    "searchPlaceholder": "البحث بمعرف المستخدم أو رقم الطلب أو قناة الدفع أو الحالة أو معرف الدفع الخارجي",
+    "empty": "لا توجد سجلات طلبات حاليًا",
+    "filters": {
+      "all": "الكل",
+      "orderType": "نوع الطلب",
+      "provider": "قناة الدفع",
+      "status": "حالة الدفع"
+    },
+    "types": {
+      "subscription": "اشتراك",
+      "topup": "شحن الرصيد"
+    },
+    "status": {
+      "pending": "في انتظار الدفع",
+      "paid": "تم الدفع",
+      "expired": "منتهي الصلاحية",
+      "failed": "فشل الدفع"
+    }
+  },
+  "conversation": {
+    "searchPlaceholder": "البحث بمعرف المستخدم أو معرف التشغيل أو الحدث أو المرحلة أو العنوان أو اسم الأداة",
+    "empty": "لا توجد أحداث محادثات حاليًا",
+    "filters": {
+      "all": "الكل",
+      "scope": "نطاق الحدث",
+      "eventType": "نوع الحدث",
+      "status": "الحالة"
+    },
+    "scopes": {
+      "trace_block": "كتلة التتبع",
+      "trace_event": "حدث التتبع",
+      "tool_call": "استدعاء الأداة"
+    },
+    "status": {
+      "streaming": "جارٍ الإنشاء",
+      "completed": "اكتمل",
+      "error": "خطأ"
+    },
+    "cleanup": {
+      "action": "حذف سجلات التشغيل",
+      "title": "حذف سجلات التشغيل",
+      "description": "سيتم حذف جميع سجلات المعالجة الخاصة بـ {count} تشغيلات محددة نهائيًا. ولن تتأثر المحادثات أو الرسائل أو المرفقات أو سجلات الاستدعاءات أو بيانات الفوترة.",
+      "confirm": "حذف",
+      "deleting": "جارٍ الحذف",
+      "success": "تم حذف {events} سجل تتبع من {runs} تشغيلات",
+      "failed": "فشل حذف سجلات التشغيل",
+      "maxSelection": "يمكن تحديد 100 تشغيل كحد أقصى في المرة الواحدة",
+      "selectAll": "تحديد تشغيلات الصفحة الحالية",
+      "selectRun": "تحديد التشغيل {runID}"
+    }
+  },
+  "detail": {
+    "titles": {
+      "audit": "تفاصيل سجل العمليات",
+      "auth": "تفاصيل سجل المصادقة",
+      "usage": "تفاصيل سجل الاستدعاء",
+      "order": "تفاصيل سجل الطلب",
+      "conversation": "تفاصيل حدث المحادثة",
+      "system": "تفاصيل حدث النظام"
+    },
+    "fallbacks": {
+      "authEvent": "حدث مصادقة",
+      "modelCall": "استدعاء نموذج",
+      "order": "سجل طلب",
+      "conversationEvent": "حدث محادثة",
+      "systemEvent": "حدث نظام",
+      "auditEvent": "حدث تدقيق"
+    },
+    "blocks": {
+      "event": "الحدث",
+      "actor": "منفذ العملية",
+      "request": "الطلب",
+      "user": "المستخدم",
+      "resource": "المورد",
+      "call": "الاستدعاء",
+      "modelRoute": "مسار النموذج",
+      "usageBilling": "فوترة الاستخدام",
+      "order": "الطلب",
+      "payment": "الدفع",
+      "conversationEvent": "حدث المحادثة",
+      "tool": "الأداة"
+    },
+    "fields": {
+      "action": "الإجراء",
+      "resource": "المورد",
+      "resourceID": "معرف المورد",
+      "createdAt": "وقت الإنشاء",
+      "user": "المستخدم",
+      "userID": "معرف المستخدم",
+      "requestID": "معرف الطلب",
+      "event": "الحدث",
+      "result": "النتيجة",
+      "reason": "السبب",
+      "occurredAt": "وقت الحدوث",
+      "level": "المستوى",
+      "source": "المصدر",
+      "message": "الرسالة",
+      "caller": "مستدعي العملية",
+      "conversationID": "معرف المحادثة",
+      "callTime": "وقت الاستدعاء",
+      "platformModel": "نموذج المنصة",
+      "upstreamName": "اسم المصدر الوسيط",
+      "upstreamModel": "نموذج المصدر الوسيط",
+      "bindingCode": "رمز الربط",
+      "protocol": "البروتوكول",
+      "billing": "الفوترة",
+      "balanceAfter": "الرصيد بعد التسوية",
+      "totalTokens": "إجمالي Token",
+      "reasoning": "الاستدلال",
+      "callCount": "عدد الاستدعاءات",
+      "latency": "زمن الاستجابة",
+      "orderNo": "رقم الطلب",
+      "orderType": "نوع الطلب",
+      "provider": "قناة الدفع",
+      "status": "الحالة",
+      "paidAt": "وقت الدفع",
+      "amount": "المبلغ",
+      "credit": "المبلغ المضاف إلى الرصيد",
+      "interval": "الفترة",
+      "externalPaymentID": "معرف الدفع الخارجي",
+      "externalCheckoutID": "معرف صفحة الدفع الخارجية",
+      "runID": "معرف التشغيل",
+      "eventScope": "نطاق الحدث",
+      "stage": "المرحلة",
+      "seq": "التسلسل",
+      "messageID": "معرف الرسالة",
+      "toolName": "اسم الأداة",
+      "toolCallID": "معرف استدعاء الأداة",
+      "title": "العنوان",
+      "summary": "الملخص",
+      "payloadSize": "حجم البيانات"
+    },
+    "result": {
+      "success": "نجاح",
+      "failure": "فشل",
+      "blocked": "محظور"
+    },
+    "rawUsageJsonTitle": "Usage JSON الأصلي",
+    "jsonTitle": "JSON الخاص بالتفاصيل",
+    "loading": "جارٍ تحميل التفاصيل",
+    "payloadOmitted": "حجم البيانات التاريخية هو {size}، وهو يتجاوز الحد الآمن للعرض، لذلك تم إخفاء المحتوى. يمكنك حذف سجل التشغيل المقابل لإزالة هذه البيانات التاريخية غير الطبيعية.",
+    "copied": "تم نسخ {label}",
+    "copyFailed": "فشل النسخ"
+  },
+  "moderation": {
+    "searchPlaceholder": "البحث برقم الحدث الكامل أو المستخدم أو النتيجة أو معرف التشغيل…",
+    "empty": "لا توجد أحداث مراجعة حاليًا.",
+    "loadFailed": "فشل تحميل أحداث المراجعة",
+    "viewDetail": "عرض التفاصيل",
+    "detailTitle": "تفاصيل حدث المراجعة",
+    "detailFailed": "فشل تحميل تفاصيل الحدث",
+    "detailText": "فك تشفير النص",
+    "detailImages": "الصور المعزولة",
+    "detailImageAlt": "صورة المراجعة {index}",
+    "imageLoadFailed": "فشل تحميل بعض الصور المعزولة",
+    "filters": {
+      "all": "الكل"
+    },
+    "results": {
+      "passed": "تم الاجتياز",
+      "hit": "تم التطابق",
+      "failedOpen": "فشل مع السماح بالمرور"
+    },
+    "directions": {
+      "input": "الإدخال",
+      "output": "الإخراج"
+    },
+    "modalities": {
+      "text": "نص",
+      "image": "صورة"
+    },
+    "columns": {
+      "eventId": "رقم الحدث",
+      "user": "المستخدم",
+      "result": "النتيجة",
+      "direction": "الاتجاه",
+      "modality": "نوع المحتوى",
+      "latency": "زمن الاستجابة",
+      "createdAt": "الوقت",
+      "actions": "الإجراءات",
+      "model": "النموذج",
+      "userID": "معرف المستخدم",
+      "runID": "معرف التشغيل"
+    },
+    "blocks": {
+      "event": "الحدث"
+    }
+  }
+}
