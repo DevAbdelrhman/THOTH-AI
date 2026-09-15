@@ -31,8 +31,6 @@ function BrandingMetadata({ branding }: { branding: BrandingDTO }) {
       <meta name="apple-mobile-web-app-title" content={branding.title} />
       <meta name="description" content={branding.description} />
       <link rel="icon" href={branding.faviconURL} />
-      <link rel="icon" href={branding.pwaIcon192URL} sizes="192x192" />
-      <link rel="icon" href={branding.pwaIcon512URL} sizes="512x512" />
       <link rel="apple-touch-icon" href={branding.appleTouchIcon180URL} sizes="180x180" />
       <link
         rel="manifest"

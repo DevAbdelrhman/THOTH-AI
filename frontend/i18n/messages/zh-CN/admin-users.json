@@ -18,13 +18,13 @@
     "contentModeration": "内容审核"
   },
   "aboutPage": {
-    "title": "关于",
-    "description": "THOTH Chat 是面向多用户 AI 应用的模型接入与对话运营平台。它将模型目录、多上游路由、参数治理、文件与 RAG、MCP 工具、用量计费、身份安全、审计与运维配置整合到同一套控制面。",
-    "details": "产品信息",
-    "product": "产品",
+    "title": "关于 THOTH",
+    "description": "THOTH Chat 是一个开源 AI 平台，支持多模型对话、模型路由、知识检索、文件、RAG、MCP 工具、用量管理、身份认证、审计以及 AI 运营。",
+    "details": "THOTH 平台信息",
+    "product": "THOTH Chat",
     "version": "版本",
     "checkUpdate": "检查更新",
-    "checkingUpdate": "检查中",
+    "checkingUpdate": "正在检查更新",
     "updateAvailableIndicator": "有可用更新",
     "updateTooltip": {
       "currentTitle": "当前版本",
@@ -47,15 +47,16 @@
       "close": "关闭"
     },
     "console": "控制台",
-    "adminConsole": "管理端",
-    "official": "官方",
-    "website": "官网",
-    "repository": "仓库",
+    "adminConsole": "THOTH 管理控制台",
+    "official": "官方网站",
+    "website": "www.thothai.cc",
+    "repository": "GitHub 仓库",
     "social": "X",
-    "blog": "博客",
+    "blog": "GitHub",
     "contact": "联系与支持",
-    "copyright": "© 2026 THOTH. THOTH Chat.",
-    "license": "代码遵循 Apache License 2.0 授权。"
+    "copyright": "© 2026 THOTH Chat. 保留所有权利。",
+    "license": "基于 Apache License 2.0 许可。",
+    "developer": "THOTH Chat"
   },
   "accessDeniedTitle": "服务加载失败",
   "accessDeniedDescription": "您无权访问此页面",

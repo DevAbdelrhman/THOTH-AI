@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	openRouterDefaultAttributionReferer = "https://thoth.com"
+	openRouterDefaultAttributionReferer = "https://www.thothai.cc"
 	openRouterDefaultAttributionTitle   = "THOTH Chat"
 	openRouterDefaultCategories         = "general-chat"
 )

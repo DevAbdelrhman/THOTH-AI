@@ -219,6 +219,7 @@ export function AdminAboutPage() {
         social: t("social"),
         blog: t("blog"),
         contact: t("contact"),
+        developer: t("developer"),
         copyright: t("copyright"),
         license: t("license"),
       }}

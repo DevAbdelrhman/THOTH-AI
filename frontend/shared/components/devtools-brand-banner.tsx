@@ -26,7 +26,7 @@ const BANNER_SCRIPT = `
     "background:#d4d4d4",
     "background:transparent"
   );
-  console.log("%cOfficial: https://thoth.com  |  Repository: https://github.com/DevAbdelrhman/THOTH-AI  |  License: Apache License 2.0", "color:#64748b;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace");
+  console.log("%cOfficial: https://www.thothai.cc  |  Repository: https://github.com/DevAbdelrhman/THOTH-AI  |  License: Apache License 2.0", "color:#64748b;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace");
 })();
 `;
 

@@ -5,7 +5,7 @@ export type ReleaseInfo = {
 
 export type VersionCompareResult = "available" | "current" | "unknown";
 
-export const LATEST_RELEASE_ENDPOINT = "https://api.github.com/repos/THOTH-AI/THOTH-Chat/releases/latest";
+export const LATEST_RELEASE_ENDPOINT = "https://api.github.com/repos/DevAbdelrhman/THOTH-AI/releases/latest";
 export const RELEASE_PAGE_PREFIX = "https://github.com/DevAbdelrhman/THOTH-AI/releases/tag/";
 
 const LATEST_RELEASE_CACHE_KEY = "thoth-chat:latest-release";

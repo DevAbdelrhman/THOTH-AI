@@ -39,7 +39,7 @@ export function AppSidebar({
       }
     : {
         name: branding.title,
-        email: "thoth.com",
+        email: "www.thothai.cc",
         avatar: "",
       };
 
